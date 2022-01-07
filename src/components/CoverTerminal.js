@@ -100,7 +100,7 @@ class CoverTerminal extends HTMLElement {
         <h1>Linux</h1>
       </div>
       <footer>
-        <div class="text">$ sudo whoami</div>
+        <div class="text">$ su manzdev</div>
       </footer>
     </div>`;
   }
