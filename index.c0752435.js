@@ -1,4 +1,4 @@
-const h=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))d(a);new MutationObserver(a=>{for(const e of a)if(e.type==="childList")for(const l of e.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&d(l)}).observe(document,{childList:!0,subtree:!0});function o(a){const e={};return a.integrity&&(e.integrity=a.integrity),a.referrerpolicy&&(e.referrerPolicy=a.referrerpolicy),a.crossorigin==="use-credentials"?e.credentials="include":a.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function d(a){if(a.ep)return;a.ep=!0;const e=o(a);fetch(a.href,e)}};h();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+const g=function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))v(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&v(i)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function v(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}};g();class r extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -88,7 +88,7 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         padding: var(--cover-padding);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${c.styles}</style>
+    <style>${r.styles}</style>
     <div class="container">
       <div class="group">
         <h1>HTML<span>5</span></h1>
@@ -99,7 +99,7 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="brand">W3C</div>
       </footer>
-    </div>`}}customElements.define("cover-html",c);class r extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-html",r);class n extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -205,7 +205,7 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         padding: var(--cover-padding);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${r.styles}</style>
+    <style>${n.styles}</style>
     <div class="container">
       <div class="group">
         <h1>CSS<span>3</span></h1>
@@ -217,7 +217,146 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="brand">W3C</div>
       </footer>
-    </div>`}}customElements.define("cover-css",r);class i extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-css",n);class l extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --size: 200px;
+
+        width: var(--size);
+        height: var(--size);
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right,
+          #fff9 0 10%,
+          #fff8 10% 20%,
+          #fff7 20% 30%,
+          #fff6 30% 40%,
+          #fff5 40% 50%,
+          #fff4 50% 60%,
+          #fff3 60% 70%,
+          #fff2 70% 80%,
+          #fff1 80% 90%,
+          #fff0 90% 100%
+        ), linear-gradient(to top,
+          #f22d 0 10%,
+          #f22c 10% 20%,
+          #f22b 20% 30%,
+          #f22a 30% 40%,
+          #f229 40% 50%,
+          #f228 50% 60%,
+          #f227 60% 70%,
+          #f226 70% 80%,
+          #f225 80% 90%,
+          #f224 90% 100%
+        );
+        background-color: #000;
+        box-shadow:
+          0 0 60px #000c inset;
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${l.styles}</style>
+    <div class="container">
+
+    </div>`}}customElements.define("retro-square",l);class s extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl: linear-gradient(200deg, #070B0F 50%, #112, #224, #447 90% 100%);
+        --stripe-gradient: repeating-linear-gradient(230deg, #1116 0 1px, transparent 4px 10px);
+        --cover-padding: 10px 25px;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background:
+          url(asfalt-dark.png),
+          var(--stripe-gradient),
+          var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+
+        font-family: "Roboto";
+        color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .title {
+        text-align: center;
+        transform: translate(0, -75%);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 4.25rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+        position: relative;
+        z-index: 5;
+        text-shadow: 3px 3px 0 #0005;
+      }
+
+      .subtitle {
+        font-family: "Roboto Mono";
+        font-size: 1.15rem;
+        font-weight: 900;
+        text-shadow: 2px 2px 0 #0005;
+        letter-spacing: -1px;
+        color: gold;
+        position: relative;
+        z-index: 5;
+      }
+
+      .subtitle em {
+        color: orange;
+      }
+
+      retro-square {
+        position: absolute;
+        transform: translate(0%, -20%) rotate(45deg);
+      }
+
+      .triangle {
+        background: #fff;
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        position: absolute;
+        bottom: -100px;
+        transform: scaleX(-0.7) rotate(45deg);
+      }
+
+      footer {
+        font-family: "Roboto Mono";
+        letter-spacing: -1px;
+        color: #999;
+        font-size: 0.9rem;
+        position: absolute;
+        bottom: 10px;
+        right: 15px;
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${s.styles}</style>
+    <div class="container">
+      <retro-square></retro-square>
+      <div class="title">
+        <h1>PostCSS</h1>
+        <div class="subtitle">BACK TO THE FUTURE <em>(with plugins)</em></div>
+      </div>
+      <div class="triangle"></div>
+      <footer>
+        Evil Martians
+      </footer>
+    </div>`}}customElements.define("cover-postcss",s);class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -322,7 +461,7 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         padding: var(--cover-padding);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${i.styles}</style>
+    <style>${c.styles}</style>
     <div class="container">
       <div class="group">
         <h1>Javascript</h1>
@@ -332,7 +471,7 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="text">Untyped language</div>
       </footer>
-    </div>`}}customElements.define("cover-js",i);class n extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-js",c);class d extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -412,16 +551,236 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translate(-10px, 10px);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${n.styles}</style>
+    <style>${d.styles}</style>
     <div class="container">
       <div class="group">
         <h2>Terminal de</h2>
         <h1>Linux</h1>
       </div>
       <footer>
-        <div class="text">$ sudo whoami</div>
+        <div class="text">$ su manzdev</div>
       </footer>
-    </div>`}}customElements.define("cover-terminal",n);const f={html:`
+    </div>`}}customElements.define("cover-terminal",d);class f extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl:
+          linear-gradient(to bottom, #234 0% 29%, #234 80% 100%);
+        --cover-padding: 10px 25px;
+        --vue-green: #42b883;
+        --vue-grey: #35495e;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: url(asfalt-dark.png), var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+      }
+
+      .vue-form-container {
+        width: 350px;
+        height: 275px;
+        margin: auto;
+        background: linear-gradient(#236c4b, #54efaa, #c3eedb);
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+      }
+
+      .vue-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--vue-grey);
+        width: 200px;
+        height: 225px;
+        margin: auto;
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+      }
+
+      .vue-form .title {
+        font-family: "Kemco Smooth";
+        color: #eee;
+      }
+
+      .vue-form .subtitle {
+        font-family: "Roboto Mono";
+        font-size: 1.75rem;
+        color: #ccc;
+        margin: 0;
+      }
+
+      .title {
+        transform: scaleX(0.7);
+        font-size: 4.75rem;
+        margin: 20px 0;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        margin: 20px 0;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 3rem;
+        color: #eee;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      footer .subtitle {
+        margin: 0;
+        font-family: "squarified";
+        font-size: 2rem;
+        text-align: center;
+        color: var(--vue-green);
+        margin-bottom: 20px;
+      }
+
+      footer .subtitle span {
+        color: #00d8ff;
+      }
+
+      footer .brand {
+        font-family: "Inero";
+        margin: 0;
+        line-height: 60%;
+        font-size: 2rem;
+        border: 1px solid #fff;
+        padding: 0 8px 8px 8px;
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${f.styles}</style>
+    <div class="container">
+      <div class="vue-form-container">
+        <div class="vue-form">
+          <span class="title">Vue</span>
+          <span class="subtitle">3.0</span>
+        </div>
+      </div>
+      <footer>
+        <div class="subtitle">Framework with <span>React</span>ivity</div>
+        <div class="brand">Evan You</div>
+      </footer>
+    </div>`}}customElements.define("cover-vue",f);class p extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl:
+          linear-gradient(to bottom, #222 0% 29%, #222 80% 100%);
+        --cover-padding: 10px 25px;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: url(asfalt-dark.png), var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr 100px;
+        justify-content: space-between;
+      }
+
+      header {
+        background: #131313;
+        position: relative;
+        padding: 12px;
+      }
+
+      header .title {
+        font-family: "Roboto Mono";
+        font-weight: 800;
+        font-size: 3.2rem;
+        letter-spacing: -2px;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        transform: translate(0, 10px);
+      }
+
+      .bands {
+        background: linear-gradient(to top,
+          #d9ed92 20%,
+          #99d98c 20% 40%,
+          #52B69A 40% 60%,
+          #168aad 60% 80%,
+          #1e6091 80% 100%
+        );
+      }
+
+      footer {
+        background: #131313;
+        padding: 8px 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
+
+      footer .subtitle {
+        font-family: "Roboto Mono";
+        font-weight: bold;
+        font-size: 1.25rem;
+        letter-spacing: -1px;
+        color: #c7cfd2;
+      }
+
+      .brand {
+        display: inline-block;
+        font-family: "Lester Bold";
+        font-size: 4.8rem;
+        padding: 0 4px;
+        letter-spacing: -5px;
+
+        color: #BF4D3B;
+        text-shadow: 0 0 1px #872b36;
+
+        position: absolute;
+        top: 3px;
+        right: 10px;
+      }
+
+      .brand::before {
+          content:'';
+          width:100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-image: radial-gradient(5px 5px, transparent 50%, #131313 51%);
+          background-size: 7px 7px;
+      }
+
+      .brand::after {
+        content :"";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background: linear-gradient(to right, #131313 0%, transparent);
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${p.styles}</style>
+    <div class="container">
+      <header>
+        <div class="title">WebComponents</div>
+        <div class="brand">W3C</div>
+      </header>
+      <div class="bands">
+      </div>
+      <footer>
+        <div class="subtitle">HTML, CSS & Javascript</div>
+      </footer>
+    </div>`}}customElements.define("cover-webcomponents",p);const m={html:`
   <svg viewBox="0 0 300 300">
     <path d="M50.362 263.638 28 12.747h245.983l-22.362 250.891L150.719 292" fill="#e34f26"/>
     <path d="m151.264 270.183 81.267-22.362 19.09-214.894H151.264" fill="#ef652a"/>
@@ -448,7 +807,23 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
     <path style="fill: #000; fill-opacity: 1; stroke: none; stroke-width: 0.190008; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" d="M.96 2.495v18.686h22.218V2.495z"/>
     <path style="fill: #fff; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; fill-opacity: 1;" d="m7.119 6.802 4.088 4.092-4.088 4.093-1.261-1.263 2.826-2.83-2.826-2.83zM11.74 15.324v1.447h5.677v-1.447z"/>
   </svg>
-  `};class s extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+  `,vue:`
+  <svg viewBox="0 0 512 512">
+    <path d="m309.725 17.443-56.65 98.695L196.424 17H7l246.074 426.204L498.264 17z" fill="#41b883" style="stroke-width: 5;" transform="translate(3 26)"/><path d="m309.725 17.443-56.65 98.695L196.424 17h-91.172l147.821 256.696L400.454 17z" fill="#34495e" style="stroke-width: 5;" transform="translate(3 26)"/>
+  </svg>
+  `,webcomponents:`
+  <svg viewBox="0 0 128 128">
+    <path style="fill-opacity: 1; stroke: none; stroke-width: 0; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; fill: #fff" d="m31.03 11.902-.536.93c-9.626 16.685-19.253 33.37-28.878 50.056l29.41 50.977c22.206.046 44.41.096 66.616.143 5.056-8.797 10.114-17.592 15.169-26.39-.49-.36-.367-.766-.022-1.18 4.644-7.828 9.29-15.653 13.932-23.481-4.822-8.104-9.647-16.205-14.468-24.308.65-.422.028-.937-.198-1.422L97.653 11.982c-22.208-.028-44.415-.052-66.622-.08zM52.174 41.58h20.995c4.255 7.113 8.505 14.231 12.76 21.342L73.264 84.259H51.93L39.712 62.906z"/>
+    <g style="fill: none; fill-rule: evenodd;">
+      <path d="m160.6 65.9-17.4 29.3-24.4-29.7 24.4-28.9z" style="fill: #166da5;" transform="matrix(.72726 0 0 .72726 5.608 15.034)"/>
+      <path d="m141.3 100.2-26.5-31.7-15.9 26.6 24.7 36.1z" style="fill: #8fdb69;" transform="matrix(.72726 0 0 .72726 5.608 15.034)"/>
+      <path d="m141 31.4-26.2 31.8-15.9-26.6L123.6.9z" style="fill: #166da5;" transform="matrix(.72726 0 0 .72726 5.608 15.034)"/>
+      <path d="M78.6 130.8 41 65.8 79.1.8H37.9L.4 65.8l37.5 65z" style="fill: #000; stroke: none; stroke-width: 2.55025; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" transform="matrix(.72726 0 0 .72726 5.608 15.034)"/>
+    </g>
+    <path style="fill: #287bbe; fill-opacity: 1; stroke: none; stroke-width: 0.927342px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;" d="m50.043 37.87 13.091-22.254 32.363.073 12.654 22.181zM77.534 41.652l32.145-.073 11.563 19.49-32.145-.072z"/>
+    <path style="fill: #ddf021; fill-opacity: 0.952941; stroke: none; stroke-width: 0.927342px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;" d="m50.043 88.114 13.091 22.254 32.363-.073 12.654-22.181zM77.534 84.332l32.145.073 11.563-19.49-32.145.072z"/>
+</svg>
+  `};class h extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --cover-size: 400px;
       }
@@ -479,10 +854,10 @@ const h=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       .container .box:hover + svg {
         transform: translateX(250px);
       }
-    `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const t=this.shadowRoot.querySelector(".container"),o=document.createElement(`cover-${this.logo}`);o.classList.add("box"),t.insertAdjacentElement("afterbegin",o)}render(){this.shadowRoot.innerHTML=`
-    <style>${s.styles}</style>
+    `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const a=this.shadowRoot.querySelector(".container"),o=document.createElement(`cover-${this.logo}`);o.classList.add("box"),a.insertAdjacentElement("afterbegin",o)}render(){this.shadowRoot.innerHTML=`
+    <style>${h.styles}</style>
 
     <div class="container">
-      ${f[this.logo]}
+      ${m[this.logo]}
     </div>
-    `}}customElements.define("cover-box",s);
+    `}}customElements.define("cover-box",h);
