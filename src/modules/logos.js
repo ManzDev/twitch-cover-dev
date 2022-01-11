@@ -30,5 +30,23 @@ export const LOGOS = {
     <path style="fill: #000; fill-opacity: 1; stroke: none; stroke-width: 0.190008; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" d="M.96 2.495v18.686h22.218V2.495z"/>
     <path style="fill: #fff; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; fill-opacity: 1;" d="m7.119 6.802 4.088 4.092-4.088 4.093-1.261-1.263 2.826-2.83-2.826-2.83zM11.74 15.324v1.447h5.677v-1.447z"/>
   </svg>
+  `,
+  vue: /* svg */ `
+  <svg viewBox="0 0 512 512">
+    <path d="m309.725 17.443-56.65 98.695L196.424 17H7l246.074 426.204L498.264 17z" fill="#41b883" style="stroke-width: 5;" transform="translate(3 26)"/><path d="m309.725 17.443-56.65 98.695L196.424 17h-91.172l147.821 256.696L400.454 17z" fill="#34495e" style="stroke-width: 5;" transform="translate(3 26)"/>
+  </svg>
+  `,
+  webcomponents: /* svg */`
+  <svg viewBox="0 0 128 128">
+    <path style="fill-opacity: 1; stroke: none; stroke-width: 0; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; fill: #fff" d="m31.03 11.902-.536.93c-9.626 16.685-19.253 33.37-28.878 50.056l29.41 50.977c22.206.046 44.41.096 66.616.143 5.056-8.797 10.114-17.592 15.169-26.39-.49-.36-.367-.766-.022-1.18 4.644-7.828 9.29-15.653 13.932-23.481-4.822-8.104-9.647-16.205-14.468-24.308.65-.422.028-.937-.198-1.422L97.653 11.982c-22.208-.028-44.415-.052-66.622-.08zM52.174 41.58h20.995c4.255 7.113 8.505 14.231 12.76 21.342L73.264 84.259H51.93L39.712 62.906z"/>
+    <g style="fill: none; fill-rule: evenodd;">
+      <path d="m160.6 65.9-17.4 29.3-24.4-29.7 24.4-28.9z" style="fill: #166da5;" transform="matrix(.72726 0 0 .72726 5.608 15.034)"/>
+      <path d="m141.3 100.2-26.5-31.7-15.9 26.6 24.7 36.1z" style="fill: #8fdb69;" transform="matrix(.72726 0 0 .72726 5.608 15.034)"/>
+      <path d="m141 31.4-26.2 31.8-15.9-26.6L123.6.9z" style="fill: #166da5;" transform="matrix(.72726 0 0 .72726 5.608 15.034)"/>
+      <path d="M78.6 130.8 41 65.8 79.1.8H37.9L.4 65.8l37.5 65z" style="fill: #000; stroke: none; stroke-width: 2.55025; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" transform="matrix(.72726 0 0 .72726 5.608 15.034)"/>
+    </g>
+    <path style="fill: #287bbe; fill-opacity: 1; stroke: none; stroke-width: 0.927342px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;" d="m50.043 37.87 13.091-22.254 32.363.073 12.654 22.181zM77.534 41.652l32.145-.073 11.563 19.49-32.145-.072z"/>
+    <path style="fill: #ddf021; fill-opacity: 0.952941; stroke: none; stroke-width: 0.927342px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;" d="m50.043 88.114 13.091 22.254 32.363-.073 12.654-22.181zM77.534 84.332l32.145.073 11.563-19.49-32.145.072z"/>
+</svg>
   `
 };

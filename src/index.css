@@ -43,6 +43,42 @@
 }
 
 @font-face {
+  font-family: "Kemco Smooth";
+  font-weight: 400;
+  src:
+    url("fonts/kemco-smooth.woff2") format("woff2"),
+    url("fonts/kemco-smooth.woff") format("woff"),
+    url("fonts/kemco-smooth.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inero";
+  font-weight: 400;
+  src:
+    url("fonts/inero.woff2") format("woff2"),
+    url("fonts/inero.woff") format("woff"),
+    url("fonts/inero.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Squarified";
+  font-weight: 400;
+  src:
+    url("fonts/squarified.woff2") format("woff2"),
+    url("fonts/squarified.woff") format("woff"),
+    url("fonts/squarified.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hieronimus";
+  font-weight: 400;
+  src:
+    url("fonts/hieronimus.woff2") format("woff2"),
+    url("fonts/hieronimus.woff") format("woff"),
+    url("fonts/hieronimus.otf") format("opentype");
+}
+
+@font-face {
   font-family: "Roboto Mono";
   font-weight: 800;
   src:

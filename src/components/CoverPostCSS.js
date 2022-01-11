@@ -11,8 +11,8 @@ class CoverPostCSS extends HTMLElement {
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
-        --cover-vinyl: linear-gradient(200deg, #070B0F 50%, #112, #334, #667 90% 100%);
-        --stripe-gradient: repeating-linear-gradient(230deg, #3336 0 1px, transparent 4px 10px);
+        --cover-vinyl: linear-gradient(200deg, #070B0F 50%, #112, #224, #447 90% 100%);
+        --stripe-gradient: repeating-linear-gradient(230deg, #1116 0 1px, transparent 4px 10px);
         --cover-padding: 10px 25px;
       }
 
