@@ -1,4 +1,4 @@
-const g=function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))v(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&v(i)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function v(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}};g();class r extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+const x=function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))m(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&m(i)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function m(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}};x();class r extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -253,17 +253,16 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
         );
         background-color: #000;
         box-shadow:
-          0 0 60px #000c inset;
+        0 0 60px #000c inset;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
     <style>${l.styles}</style>
     <div class="container">
-
     </div>`}}customElements.define("retro-square",l);class s extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
-        --cover-vinyl: linear-gradient(200deg, #070B0F 50%, #112, #224, #447 90% 100%);
+        --cover-vinyl: linear-gradient(200deg, #0e121f 50%, #112, #282846, #1e1e41 90% 100%);
         --stripe-gradient: repeating-linear-gradient(230deg, #1116 0 1px, transparent 4px 10px);
         --cover-padding: 10px 25px;
       }
@@ -276,10 +275,10 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
           var(--stripe-gradient),
           var(--cover-vinyl);
         box-shadow:
-          0 0 80px #000c inset,
+          0 0 150px #0006 inset,
           0 0 10px #0007;
 
-        font-family: "Roboto";
+        font-family: "Lexend";
         color: #fff;
 
         display: flex;
@@ -302,14 +301,12 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
         letter-spacing: -1px;
         position: relative;
         z-index: 5;
-        text-shadow: 3px 3px 0 #0005;
       }
 
       .subtitle {
-        font-family: "Roboto Mono";
+        font-family: "Lexend";
         font-size: 1.15rem;
         font-weight: 900;
-        text-shadow: 2px 2px 0 #0005;
         letter-spacing: -1px;
         color: gold;
         position: relative;
@@ -326,7 +323,7 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
       }
 
       .triangle {
-        background: #fff;
+        background: #fff5ee;
         width: 150px;
         height: 150px;
         border-radius: 20px;
@@ -336,10 +333,10 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
       }
 
       footer {
-        font-family: "Roboto Mono";
+        font-family: "Lexend";
         letter-spacing: -1px;
-        color: #999;
-        font-size: 0.9rem;
+        color: #bf4040;
+        font-size: 1.2rem;
         position: absolute;
         bottom: 10px;
         right: 15px;
@@ -668,7 +665,7 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
         <div class="subtitle">Framework with <span>React</span>ivity</div>
         <div class="brand">Evan You</div>
       </footer>
-    </div>`}}customElements.define("cover-vue",f);class p extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-vue",f);class h extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -769,7 +766,7 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
         background: linear-gradient(to right, #131313 0%, transparent);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${p.styles}</style>
+    <style>${h.styles}</style>
     <div class="container">
       <header>
         <div class="title">WebComponents</div>
@@ -780,7 +777,380 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
       <footer>
         <div class="subtitle">HTML, CSS & Javascript</div>
       </footer>
-    </div>`}}customElements.define("cover-webcomponents",p);const m={html:`
+    </div>`}}customElements.define("cover-webcomponents",h);class p extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --bgcolor: #201d30;
+        --primary-font: "Russo One";
+        --cover-vinyl: linear-gradient(
+          to bottom,
+          var(--bgcolor) 0% 29%,
+          var(--bgcolor) 80% 100%
+        );
+        --cover-padding: 10px 25px;
+        --offset: 8;
+        --circle-gradient: radial-gradient(
+          circle at 100% 100%,
+          #cf3c7b calc(var(--offset) * 0%) calc((var(--offset) * 0%) + (var(--offset) * 1%) - 0.25%),
+          #9847ee calc(var(--offset) * 1%) calc((var(--offset) * 1%) + (var(--offset) * 1%) - 0.25%),
+          #611bc2 calc(var(--offset) * 2%) calc((var(--offset) * 2%) + (var(--offset) * 1%) - 0.25%),
+          #433884 calc(var(--offset) * 3%) calc((var(--offset) * 3%) + (var(--offset) * 1%) - 0.25%),
+          #27215f calc(var(--offset) * 4%) calc((var(--offset) * 4%) + (var(--offset) * 1%) - 0.25%),
+          transparent calc(var(--offset) * 5%) 100%
+        );
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background:
+          var(--circle-gradient),
+          url(asfalt-dark.png),
+          var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+
+        & .line {
+          display: flex;
+          justify-content: space-between;
+
+          background: white;
+          width: 100%;
+          height: 25px;
+
+          & .dot-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-left: 5%;
+            width: 20%;
+            height: 100%;
+
+            & .dot {
+              --size: 10px;
+
+              width: var(--size);
+              height: var(--size);
+              border-radius: 50%;
+              background: #d0407b;
+            }
+          }
+
+          & .box-container {
+            display: flex;
+
+            width: 45%;
+            height: 100%;
+
+            & .box {
+              width: 100%;
+              height: 100%;
+              background: var(--color);
+            }
+
+            & :nth-child(1) { --color: #cf3c7a; }
+            & :nth-child(2) { --color: #9847ee; }
+            & :nth-child(3) { --color: #5e1bc1; }
+            & :nth-child(4) { --color: #423a83; }
+            & :nth-child(5) {
+              width: 300%;
+              --color: #272161;
+            }
+          }
+        }
+
+        & .middle {
+          width: 75%;
+          height: 75%;
+
+          display: flex;
+          flex-direction: column;
+          padding-top: 1.5rem;
+
+          & .top h1 {
+            font-family: var(--primary-font);
+            font-variant: small-caps;
+            font-size: 3.25rem;
+            font-weight: 600;
+            color: #d03d7c;
+            margin: 0;
+            line-height: 80%;
+          }
+
+          & .top h2 {
+            font-family: var(--primary-font);
+            font-size: 1.75rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 100%;
+            color: #e5c37f;
+            margin: 0;
+          }
+
+          & .top h3 {
+            font-family: "Lexend";
+            font-size:1rem;
+            color: #fff;
+            margin: 0;
+            margin-top: 1rem;
+            line-height: 120%;
+          }
+
+          & .box {
+            --size: 25px;
+
+            margin-top: calc(var(--size) * 1);
+            margin-left: calc(var(--size) * 2);
+
+            width: var(--size);
+            height: var(--size);
+            background: #9847ee;
+            box-shadow:
+              calc(var(--size) * -1) calc(var(--size) * 1) #e2c478,
+              calc(var(--size) * -2) calc(var(--size) * 2) #dba25d,
+              calc(var(--size) * -1) calc(var(--size) * 3) #cf3c7a
+          }
+        }
+      }
+
+
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${p.styles}</style>
+    <div class="container">
+      <div class="line">
+        <div class="dot-container">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="box-container">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box large"></div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="top">
+          <h1>Fundamentos</h1>
+          <h2>de programaci\xF3n</h2>
+          <h3>Bases y pilares de desarrollo para aprender a programar</h3>
+        </div>
+        <div class="bottom">
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>`}}customElements.define("cover-fundamentos",p);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --bgcolor: #000;
+        --lines-gradient:
+          repeating-linear-gradient(transparent 0 3%, #0d1015 3% 3.5%);
+        --cover-vinyl:
+          linear-gradient(to bottom, var(--bgcolor) 0% 29%, var(--bgcolor) 80% 100%);
+        --cover-padding: 10px 25px;
+        --white-gradient:
+          linear-gradient(
+            to bottom,
+            #ffffff 0 20%,
+            #dddddd 20% 40%,
+            #bbbbbb 40% 60%,
+            #999999 60% 80%,
+            #777777 80% 100%
+          );
+        --rainbow-gradient:
+          linear-gradient(
+            to bottom,
+            #fec803 0 20%,
+            #ff6701 20% 40%,
+            #ff0028 40% 60%,
+            #b401d6 60% 80%,
+            #4c00ba 80% 100%
+          );
+      }
+
+      .container::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background:
+          linear-gradient(-29deg, transparent 20%, #2225 40% 60%, transparent 80%),
+          radial-gradient(transparent 70%, #2227 98%);
+      }
+
+      .container {
+        --offset: 2.5rem;
+
+        width: 100%;
+        height: 100%;
+        background:
+          var(--lines-gradient),
+          var(--cover-vinyl);
+        background-blend-mode: screen;
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+
+        display: flex;
+        flex-direction: column;
+
+        & .top {
+          width: 75%;
+          height: 45%;
+          position: absolute;
+          z-index: 5;
+
+          & h1 {
+            font-family: "Lexend";
+            font-size: 6.5rem;
+            letter-spacing: -5px;
+            line-height: 100%;
+            color: #fff;
+            margin: 0;
+            margin-top: calc(var(--offset) * 0.5);
+            margin-left: var(--offset);
+          }
+
+          & h2 {
+            font-family: "Lexend";
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0;
+            margin-left: var(--offset);
+          }
+
+          & h3 {
+            font-family: "Victor Mono";
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: -1px;
+            color: #fff;
+            margin: 0;
+            margin-top: 0.5rem;
+            background: #4c00ba;
+            padding: 0 var(--offset);
+            width: 60%;
+          }
+        }
+
+        & .side-rainbow {
+          width: 15px;
+          height: 115px;
+          position: absolute;
+          top: 25px;
+          right: -15px;
+          transform-origin: 0 0;
+          background: var(--white-gradient);
+          rotate: 90deg;
+        }
+
+        & .middle {
+          margin-top: 36%;
+          height: 33.5%;
+          display: flex;
+          align-items: end;
+          position: relative;
+
+          & .horizontal {
+            background: var(--rainbow-gradient);
+            width: 70%;
+            height: 50%;
+          }
+
+          & .diagonal {
+            background: var(--rainbow-gradient);
+            width: 30%;
+            height: 50%;
+            transform-origin: 0 0;
+            transform: skewY(-45deg);
+          }
+        }
+
+        & .bottom {
+          width: calc(100% - 75px);
+          height: 30%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+
+          & .text {
+            font-family: "Lexend";
+            text-align: center;
+            color: #888;
+            border: 1px solid #888;
+            border-radius: 5px;
+            padding: 0 10px 10px;
+
+
+            & h3 {
+              font-size: 1.5rem;
+              margin: 0;
+            }
+
+            & p {
+              font-size: 1rem;
+              margin: 0;
+              line-height: 50%;
+            }
+          }
+        }
+
+        & footer {
+          width: 25px;
+          height: 110px;
+          position: absolute;
+          bottom: 0;
+          right: 25px;
+          background: linear-gradient(
+            to top,
+            #ffc900 0 20%,
+            transparent 20% 30%,
+            #ff6701 30% 45%,
+            transparent 45% 55%,
+            #ff0029 55% 65%,
+            transparent 65% 75%,
+            #ad0bcd 75% 80%,
+            transparent 80% 90%,
+            #410c94 90% 92.5%,
+            transparent 92.5% 100%
+          );
+        }
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${v.styles}</style>
+    <div class="container">
+      <div class="side-rainbow"></div>
+      <div class="top">
+        <h1>SVG</h1>
+        <h2>VECTOR IMAGES</h2>
+        <h3>MANZ.DEV</h3>
+      </div>
+      <div class="middle">
+        <div class="horizontal"></div>
+        <div class="diagonal"></div>
+      </div>
+      <div class="bottom">
+        <div class="text">
+          <h3>HTML</h3>
+          <p>Compatible</p>
+        </div>
+        <div class="text">
+          <h3>W3C</h3>
+          <p>Powered</p>
+        </div>
+        <footer></footer>
+      </div>
+    </div>`}}customElements.define("cover-svg",v);const b={html:`
   <svg viewBox="0 0 300 300">
     <path d="M50.362 263.638 28 12.747h245.983l-22.362 250.891L150.719 292" fill="#e34f26"/>
     <path d="m151.264 270.183 81.267-22.362 19.09-214.894H151.264" fill="#ef652a"/>
@@ -823,7 +1193,7 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
     <path style="fill: #287bbe; fill-opacity: 1; stroke: none; stroke-width: 0.927342px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;" d="m50.043 37.87 13.091-22.254 32.363.073 12.654 22.181zM77.534 41.652l32.145-.073 11.563 19.49-32.145-.072z"/>
     <path style="fill: #ddf021; fill-opacity: 0.952941; stroke: none; stroke-width: 0.927342px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1;" d="m50.043 88.114 13.091 22.254 32.363-.073 12.654-22.181zM77.534 84.332l32.145.073 11.563-19.49-32.145.072z"/>
 </svg>
-  `};class h extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+  `};class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --cover-size: 400px;
       }
@@ -855,9 +1225,9 @@ const g=function(){const a=document.createElement("link").relList;if(a&&a.suppor
         transform: translateX(250px);
       }
     `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const a=this.shadowRoot.querySelector(".container"),o=document.createElement(`cover-${this.logo}`);o.classList.add("box"),a.insertAdjacentElement("afterbegin",o)}render(){this.shadowRoot.innerHTML=`
-    <style>${h.styles}</style>
+    <style>${g.styles}</style>
 
     <div class="container">
-      ${m[this.logo]}
+      ${b[this.logo]}
     </div>
-    `}}customElements.define("cover-box",h);
+    `}}customElements.define("cover-box",g);
