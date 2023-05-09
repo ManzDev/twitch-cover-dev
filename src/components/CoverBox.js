@@ -5,6 +5,8 @@ import "./CoverJS.js";
 import "./CoverTerminal.js";
 import "./CoverVue.js";
 import "./CoverWebComponents.js";
+import "./CoverFundamentos.js";
+import "./CoverSVG.js";
 import { LOGOS } from "../modules/logos.js";
 
 class CoverBox extends HTMLElement {

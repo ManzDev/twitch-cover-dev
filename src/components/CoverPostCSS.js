@@ -11,7 +11,7 @@ class CoverPostCSS extends HTMLElement {
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
-        --cover-vinyl: linear-gradient(200deg, #070B0F 50%, #112, #224, #447 90% 100%);
+        --cover-vinyl: linear-gradient(200deg, #0e121f 50%, #112, #282846, #1e1e41 90% 100%);
         --stripe-gradient: repeating-linear-gradient(230deg, #1116 0 1px, transparent 4px 10px);
         --cover-padding: 10px 25px;
       }
@@ -24,10 +24,10 @@ class CoverPostCSS extends HTMLElement {
           var(--stripe-gradient),
           var(--cover-vinyl);
         box-shadow:
-          0 0 80px #000c inset,
+          0 0 150px #0006 inset,
           0 0 10px #0007;
 
-        font-family: "Roboto";
+        font-family: "Lexend";
         color: #fff;
 
         display: flex;
@@ -50,14 +50,12 @@ class CoverPostCSS extends HTMLElement {
         letter-spacing: -1px;
         position: relative;
         z-index: 5;
-        text-shadow: 3px 3px 0 #0005;
       }
 
       .subtitle {
-        font-family: "Roboto Mono";
+        font-family: "Lexend";
         font-size: 1.15rem;
         font-weight: 900;
-        text-shadow: 2px 2px 0 #0005;
         letter-spacing: -1px;
         color: gold;
         position: relative;
@@ -74,7 +72,7 @@ class CoverPostCSS extends HTMLElement {
       }
 
       .triangle {
-        background: #fff;
+        background: #fff5ee;
         width: 150px;
         height: 150px;
         border-radius: 20px;
@@ -84,10 +82,10 @@ class CoverPostCSS extends HTMLElement {
       }
 
       footer {
-        font-family: "Roboto Mono";
+        font-family: "Lexend";
         letter-spacing: -1px;
-        color: #999;
-        font-size: 0.9rem;
+        color: #bf4040;
+        font-size: 1.2rem;
         position: absolute;
         bottom: 10px;
         right: 15px;

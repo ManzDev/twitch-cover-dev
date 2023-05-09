@@ -41,7 +41,7 @@ class RetroSquare extends HTMLElement {
         );
         background-color: #000;
         box-shadow:
-          0 0 60px #000c inset;
+        0 0 60px #000c inset;
       }
     `;
   }
@@ -54,7 +54,6 @@ class RetroSquare extends HTMLElement {
     this.shadowRoot.innerHTML = /* html */`
     <style>${RetroSquare.styles}</style>
     <div class="container">
-
     </div>`;
   }
 }

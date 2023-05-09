@@ -1,4 +1,11 @@
 @font-face {
+  font-family: "Russo One";
+  src:
+    url("fonts/russo-one.woff2") format("woff2"),
+    url("fonts/russo-one.woff") format("woff");
+}
+
+@font-face {
   font-family: "Lester Bold";
   src:
     url("fonts/lester-bold.woff2") format("woff2"),
@@ -7,7 +14,7 @@
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: Roboto;
   font-weight: 900;
   src:
     url("fonts/roboto-900.woff2") format("woff2"),
@@ -16,16 +23,7 @@
 }
 
 @font-face {
-  font-family: "Roboto";
-  font-weight: 700;
-  src:
-    url("fonts/roboto-700.woff2") format("woff2"),
-    url("fonts/roboto-700.woff") format("woff"),
-    url("fonts/roboto-700.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Roboto";
+  font-family: Roboto;
   font-weight: 400;
   src:
     url("fonts/roboto-400.woff2") format("woff2"),
@@ -34,14 +32,22 @@
 }
 
 @font-face {
+  font-family: EnterCommand;
+  src:
+    url("fonts/entercommand.woff2") format("woff2"),
+    url("fonts/entercommand.woff") format("woff");
+}
+
+@font-face {
   font-family: "Roboto Mono";
   font-weight: 400;
   src:
-    url("fonts/roboto-mono-400.woff2") format("woff2"),
-    url("fonts/roboto-mono-400.woff") format("woff"),
-    url("fonts/roboto-mono-400.ttf") format("truetype");
+    url("fonts/roboto-mono-vf.woff2") format("woff2"),
+    url("fonts/roboto-mono-vf.woff") format("woff"),
+    url("fonts/roboto-mono-vf.ttf") format("truetype");
 }
 
+/*
 @font-face {
   font-family: "Kemco Smooth";
   font-weight: 400;
@@ -95,6 +101,7 @@
     url("fonts/roboto-300-italic.woff") format("woff"),
     url("fonts/roboto-300-italic.ttf") format("truetype");
 }
+*/
 
 body {
   margin: 0;
