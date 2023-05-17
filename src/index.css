@@ -1,4 +1,37 @@
 @font-face {
+  font-family: Coda;
+  font-weight: 400;
+  src:
+    url("fonts/coda.woff2") format("woff2"),
+    url("fonts/coda.woff") format("woff");
+}
+
+@font-face {
+  font-family: Arvo;
+  font-weight: 400;
+  src:
+    url("fonts/arvo-400.woff2") format("woff2"),
+    url("fonts/arvo-400.woff") format("woff");
+}
+
+@font-face {
+  font-family: Arvo;
+  font-weight: 700;
+  src:
+    url("fonts/arvo-700.woff2") format("woff2"),
+    url("fonts/arvo-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: Arvo;
+  font-weight: 700;
+  font-style: italic;
+  src:
+    url("fonts/arvo-700-italic.woff2") format("woff2"),
+    url("fonts/arvo-700-italic.woff") format("woff");
+}
+
+@font-face {
   font-family: "Russo One";
   src:
     url("fonts/russo-one.woff2") format("woff2"),

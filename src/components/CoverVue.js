@@ -9,11 +9,14 @@ class CoverVue extends HTMLElement {
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
+        --bgcolor: #151515;
         --cover-vinyl:
-          linear-gradient(to bottom, #234 0% 29%, #234 80% 100%);
+          linear-gradient(
+            to bottom,
+            var(--bgcolor) 0% 29%,
+            var(--bgcolor) 80% 100%
+          );
         --cover-padding: 10px 25px;
-        --vue-green: #42b883;
-        --vue-grey: #35495e;
       }
 
       .container {
@@ -23,83 +26,100 @@ class CoverVue extends HTMLElement {
         box-shadow:
           0 0 80px #000c inset,
           0 0 10px #0007;
+
+        display: grid;
+        grid-template-rows: 0.65fr 0.35fr;
       }
 
-      .vue-form-container {
-        width: 350px;
-        height: 275px;
-        margin: auto;
-        background: linear-gradient(#236c4b, #54efaa, #c3eedb);
-        clip-path: polygon(0 0, 50% 100%, 100% 0);
+      .container::after {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        box-shadow: 0 0 10px #000e inset;
       }
 
-      .vue-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: var(--vue-grey);
-        width: 200px;
-        height: 225px;
-        margin: auto;
-        clip-path: polygon(0 0, 50% 100%, 100% 0);
+      .logo-container {
+        overflow: hidden;
       }
 
-      .vue-form .title {
-        font-family: "Kemco Smooth";
+      .logo-wrapper {
+        display: grid;
+        grid-template-rows: 0.3fr 0.7fr;
+        height: 100%;
+        rotate: -45deg;
+      }
+
+      .supertitle {
+        font-family: Coda;
+        font-size: 1.1rem;
+        color: #8e7740;
+        translate: 30px 50px;
+      }
+
+      .logo-wrapper h1 {
+        font-family: Coda;
+        font-size: 6rem;
+        text-align: center;
+        padding-right: 5rem;
+        line-height: 130%;
+        translate: 0 15px;
+        margin: 0;
         color: #eee;
       }
 
-      .vue-form .subtitle {
-        font-family: "Roboto Mono";
-        font-size: 1.75rem;
-        color: #ccc;
-        margin: 0;
+      .logo {
+        width: 200%;
+      }
+
+      .logo > div {
+        height: 20px;
+        margin: var(--sep-size, 3px);
+        background: #42d392;
+      }
+
+      .logo > div:nth-child(2) { --sep-size: 4px }
+      .logo > div:nth-child(3) { --sep-size: 5px }
+      .logo > div:nth-child(4) { --sep-size: 6px }
+      .logo > div:nth-child(5) { --sep-size: 7px }
+      .logo > div:nth-child(6) { --sep-size: 8px }
+      .logo > div:nth-child(7) { --sep-size: 9px }
+      .logo > div:nth-child(8) { --sep-size: 10px }
+      .logo > div:nth-child(9) { --sep-size: 11px }
+
+      .title-container {
+        font-family: "Montserrat";
+        display: flex;
+        flex-direction: column;
+        color: #42d392;
+        text-align: center;
+        margin: 0.75rem 0;
       }
 
       .title {
-        transform: scaleX(0.7);
-        font-size: 4.75rem;
-        margin: 20px 0;
+        font-size: 1.25rem;
+        text-align: right;
+        margin-right: 1.25rem;
       }
 
       .subtitle {
         font-size: 1.5rem;
-        margin: 20px 0;
+        background: #115134;
+        color: #fff;
+        padding: 0.5rem 0.5rem 0.5rem 4.5rem;
+        text-transform: uppercase;
+        margin: 0.5rem 0;
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 4% 100%);
       }
 
-      footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 3rem;
-        color: #eee;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        margin-bottom: 25px;
+      .caption {
+        font-size: 1.2rem;
+        text-align: right;
+        translate: 0 4px;
+        margin-right: 2.4rem;
+        color: #ccc;
       }
 
-      footer .subtitle {
-        margin: 0;
-        font-family: "squarified";
-        font-size: 2rem;
-        text-align: center;
-        color: var(--vue-green);
-        margin-bottom: 20px;
-      }
-
-      footer .subtitle span {
-        color: #00d8ff;
-      }
-
-      footer .brand {
-        font-family: "Inero";
-        margin: 0;
-        line-height: 60%;
-        font-size: 2rem;
-        border: 1px solid #fff;
-        padding: 0 8px 8px 8px;
-      }
     `;
   }
 
@@ -111,16 +131,37 @@ class CoverVue extends HTMLElement {
     this.shadowRoot.innerHTML = /* html */`
     <style>${CoverVue.styles}</style>
     <div class="container">
-      <div class="vue-form-container">
-        <div class="vue-form">
-          <span class="title">Vue</span>
-          <span class="subtitle">3.0</span>
+
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <span class="supertitle">Framework progresivo</span>
+          <h1>vue.js</h1>
+          <div class="logo">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
-      <footer>
-        <div class="subtitle">Framework with <span>React</span>ivity</div>
-        <div class="brand">Evan You</div>
-      </footer>
+
+      <div class="title-container">
+        <div class="title">Options + Composition API</div>
+        <div class="subtitle">¡Con reactividad!</div>
+        <div class="caption">Curva de aprendizaje baja</div>
+      </div>
+
     </div>`;
   }
 }
