@@ -1,4 +1,19 @@
 @font-face {
+  font-family: Rubik;
+  src:
+    url("fonts/rubik-vf.woff2") format("woff2"),
+    url("fonts/rubik-vf.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik Italic";
+  font-style: italic;
+  src:
+    url("fonts/rubik-italic-vf.woff2") format("woff2"),
+    url("fonts/rubik-italic-vf.woff") format("woff");
+}
+
+@font-face {
   font-family: Coda;
   font-weight: 400;
   src:
