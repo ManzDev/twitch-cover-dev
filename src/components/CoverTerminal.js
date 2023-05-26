@@ -9,7 +9,7 @@ class CoverTerminal extends HTMLElement {
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
-        --shadow-gradient: linear-gradient(to left, #fff6 -3%, transparent 2% 98%, #0009 104%);
+        --shadow-gradient: linear-gradient(to left, #0006 0%, transparent 2% 98%, #0009 104%);
         --cover-vinyl: linear-gradient(
           140deg,
           transparent 0 45%,
@@ -49,6 +49,7 @@ class CoverTerminal extends HTMLElement {
         text-align: left;
         color: #eee;
         margin: 0;
+        text-shadow: 0 0 15px #000;
       }
 
       .group {
@@ -66,6 +67,8 @@ class CoverTerminal extends HTMLElement {
       h2 {
         font-size: 2.25rem;
         color: #777;
+        font-weight: 600;
+        font-style: italic;
       }
 
       footer {
@@ -80,7 +83,7 @@ class CoverTerminal extends HTMLElement {
         font-size: 2.2rem;
         line-height: 100%;
         text-align: left;
-        color: #707070;
+        color: #aaa;
         margin: 0;
         transform: translate(-10px, 10px);
       }

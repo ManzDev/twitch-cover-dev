@@ -44,6 +44,8 @@ class CoverSVG extends HTMLElement {
         background:
           linear-gradient(-29deg, transparent 20%, #2225 40% 60%, transparent 80%),
           radial-gradient(transparent 70%, #2227 98%);
+        box-shadow: 0 0 30px #000 inset;
+        z-index: 10;
       }
 
       .container {

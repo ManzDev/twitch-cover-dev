@@ -58,7 +58,7 @@ class CoverTypescript extends HTMLElement {
         position: absolute;
         background-image: radial-gradient(#111, #222);
         inset: 0;
-        clip-path: polygon(100% 5%, 90% 25%, 90% 75%, 100% 95%);
+        clip-path: polygon(100% 5%, 93% 25%, 93% 75%, 100% 95%);
       }
 
       .big.gradient {

@@ -9,23 +9,23 @@ class CoverCSS extends HTMLElement {
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
-        --shadow-gradient: linear-gradient(to left, #fff6 -3%, transparent 2% 98%, #0009 104%);
+        --shadow-gradient: linear-gradient(to left, #0006 -3%, transparent 2% 98%, #0009 104%);
         --cover-vinyl:
           linear-gradient(to bottom, #222 0% 29%, transparent 29% 80%, #222 80% 100%),
           linear-gradient(to right, #222 0% 10%, transparent 10% 90%, #222 90% 100%),
           linear-gradient(
             130deg,
             #222 30%,
-            #37B4F6 30% 35%,
-            #222 35% 40%,
-            #4D8CE9 40% 45%,
-            #5D5EDC 45% 55%,
-            #6B36CC 55% 65%,
-            #C9CDD0 65% 75%,
-            #679FB8 75% 76%,
-            #C9CDD0 76% 86%,
-            #679FB8 86% 86.5%,
-            #C9CDD0 86.5% 100%
+            #37B4F6 30.1% 35%,
+            #222 35.1% 40%,
+            #4D8CE9 40.1% 45%,
+            #5D5EDC 45.1% 55%,
+            #6B36CC 55.1% 65%,
+            #C9CDD0 65.1% 75%,
+            #679FB8 75.1% 76%,
+            #C9CDD0 76.1% 86%,
+            #679FB8 86.1% 86.5%,
+            #C9CDD0 86.6% 100%
           );
         --cover-padding: 10px 25px;
       }

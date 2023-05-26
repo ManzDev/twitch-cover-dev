@@ -152,14 +152,16 @@
 */
 
 body {
-  margin: 0;
+  margin: 2rem 0;
   background: #224;
 }
 
 .container {
+  --columns: 1;
+
   display: grid;
-  grid-template-columns: repeat(2, 400px);
-  grid-template-rows: repeat(2, 400px);
+  grid-template-columns: repeat(var(--columns), 400px);
+  grid-template-rows: repeat(var(--columns), 400px);
   gap: 25px 250px;
   margin: 2em 2em 0 4em;
 }

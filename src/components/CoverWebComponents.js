@@ -28,6 +28,15 @@ class CoverWebComponents extends HTMLElement {
         justify-content: space-between;
       }
 
+      .container::after {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        box-shadow: 0 0 10px #000e inset;
+        z-index: 10;
+      }
+
       header {
         background: #131313;
         position: relative;

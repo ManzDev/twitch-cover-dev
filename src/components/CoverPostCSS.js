@@ -50,6 +50,7 @@ class CoverPostCSS extends HTMLElement {
         letter-spacing: -1px;
         position: relative;
         z-index: 5;
+        text-shadow: 0 0 15px #0003;
       }
 
       .subtitle {
@@ -60,6 +61,7 @@ class CoverPostCSS extends HTMLElement {
         color: gold;
         position: relative;
         z-index: 5;
+        text-shadow: 0 0 15px #0005;
       }
 
       .subtitle em {

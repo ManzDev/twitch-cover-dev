@@ -9,15 +9,15 @@ class CoverHTML extends HTMLElement {
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
-        --shadow-gradient: linear-gradient(to left, #fff6 -3%, transparent 2% 98%, #0009 104%);
+        --shadow-gradient: linear-gradient(to left, #0006 -3%, transparent 2% 98%, #0009 102%);
         --cover-vinyl: linear-gradient(
           145deg,
-          #fff 40%,
+          #fff 40.1%,
           #D3274D 40.25% 45%,
           #DE5737 45.25% 50%,
           #EA8F26 50.25% 55%,
           #EFB631 55.25% 60%,
-          #1E1F21 60%
+          #1E1F21 60.1%
         );
         --cover-padding: 6px 16px;
         font-size: 16px;
