@@ -10,6 +10,8 @@ import "./CoverSVG.js";
 import "./CoverNPM.js";
 import "./CoverTypescript.js";
 import "./CoverReact.js";
+import "./CoverAstro.js";
+import "./CoverNodeJS.js";
 import { LOGOS } from "../modules/logos.js";
 
 class CoverBox extends HTMLElement {

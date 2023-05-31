@@ -95,6 +95,23 @@
     url("fonts/roboto-mono-vf.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: Anybody;
+  src:
+    url("fonts/anybody-vf.woff2") format("woff2"),
+    url("fonts/anybody-vf.woff") format("woff"),
+    url("fonts/anybody-vf.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  src:
+    url("fonts/playfair-display-vf.woff2") format("woff2"),
+    url("fonts/playfair-display-vf.woff") format("woff"),
+    url("fonts/playfair-display-vf.ttf") format("truetype");
+}
+
 /*
 @font-face {
   font-family: "Kemco Smooth";
