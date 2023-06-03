@@ -202,4 +202,4 @@ class CoverNodeJS extends HTMLElement {
   }
 }
 
-customElements.define("cover-node-js", CoverNodeJS);
+customElements.define("cover-node", CoverNodeJS);
