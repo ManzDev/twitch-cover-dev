@@ -1,4 +1,11 @@
 @font-face {
+  font-family: Minercraftory;
+  src:
+    url("fonts/minercraftory.woff2") format("woff2"),
+    url("fonts/minercraftory.woff") format("woff");
+}
+
+@font-face {
   font-family: Rubik;
   src:
     url("fonts/rubik-vf.woff2") format("woff2"),
