@@ -12,6 +12,7 @@ import "./CoverTypescript.js";
 import "./CoverReact.js";
 import "./CoverAstro.js";
 import "./CoverNodeJS.js";
+import "./CoverTailwind.js";
 import { LOGOS } from "../modules/logos.js";
 
 class CoverBox extends HTMLElement {
