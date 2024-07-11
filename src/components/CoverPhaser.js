@@ -19,7 +19,7 @@ class CoverPhaser extends HTMLElement {
         --blue: #99388c;
         --red: #99388c;
         --yellow: gold;
-        --pink: #c85174;
+        --pink: #000;
         --green: #a7c738;
       }
 
@@ -68,14 +68,14 @@ class CoverPhaser extends HTMLElement {
         background-color: var(--pink);
         background-image: linear-gradient(
           -225deg,
-          #fff 0px 60px,
-          #fffd 60px 80px,
-          #fffb 80px 100px,
-          #fff9 100px 120px,
-          #fff7 120px 140px,
-          #fff5 140px 160px,
-          #fff3 160px 180px,
-          #fff1 180px 200px
+          #6668 0px 60px,
+          #6667 60px 80px,
+          #6666 80px 100px,
+          #6665 100px 120px,
+          #6664 120px 140px,
+          #6663 140px 160px,
+          #6662 160px 180px,
+          #6661 180px 200px
         );
         position: relative;
         display: grid;
@@ -116,14 +116,14 @@ class CoverPhaser extends HTMLElement {
           border-radius: 50%;
           width: var(--size);
           height: var(--size);
-          background-color: var(--green);
+          background-color: var(--yellow);
           background-image: linear-gradient(
             315deg,
-            #0000 0 60px,
-            #0002 60px 80px,
-            #555 80px 100px,
-            #333 100px 120px,
-            #111 120px 140px
+            #f3a50e 0 60px,
+            #c0820b 60px 80px,
+            #8d5f08 80px 100px,
+            #5a3c05 100px 120px,
+            #271a02 120px 140px
           );
           position: absolute;
           z-index: 5;
