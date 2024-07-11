@@ -13,6 +13,13 @@
 }
 
 @font-face {
+  font-family: Xolonium;
+  src:
+    url("fonts/xolonium.woff2") format("woff2"),
+    url("fonts/xolonium.woff") format("woff");
+}
+
+@font-face {
   font-family: "Rubik Italic";
   font-style: italic;
   src:

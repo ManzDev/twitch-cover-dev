@@ -21,16 +21,17 @@ const COLORS = [
 const createGrid = (size, level) => {
   const TOTAL = size * 2 + ((size - 2) * 2);
 
-  const innerSize = size - 2;
+  const newSize = size - 2;
   const currentColor = COLORS[level];
   const margin = (7 - level) / 2;
   const delay = level / 2;
+  const inlineStyles = `--size: ${newSize}; --delay: ${delay}s; --color: ${currentColor}; --margin: ${margin}px`;
 
   const first = /* html */"<div></div>".repeat(size + 1);
-  const middle = /* html */`<div class="central grid" style="--size: ${innerSize}; --delay: ${delay}s; --color: ${currentColor}; --margin: ${margin}px">${level < 7 ? createGrid(innerSize, level + 1) : ""}</div>`;
+  const recursion = /* html */`<div class="central grid" style="${inlineStyles}">${level < 7 ? createGrid(newSize, level + 1) : ""}</div>`;
   const last = /* html */"<div></div>".repeat(TOTAL - (size + 2) + 1);
 
-  return first + middle + last;
+  return first + recursion + last;
 };
 
 class CoverTailwind extends HTMLElement {
@@ -104,7 +105,7 @@ class CoverTailwind extends HTMLElement {
             color-mix(in srgb, var(--color, ${COLORS[0]}), black 30%);*/
           margin: var(--margin, 3.5px);
           border-radius: 1px;
-          /* animation: resize 2s infinite alternate var(--delay); */
+          /* animation: resize 2s infinite alternate var(--delay, 0.5s); */
         }
 
         & .central {
