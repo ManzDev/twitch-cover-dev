@@ -1,5 +1,3 @@
-const invader = /* svg */"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" d=\"M7 6H5V4h2zm10 0h2V4h-2zm6 6v6h-2v-4h-2v4h-2v-2H7v2H5v-4H3v4H1v-6h2v-2h2V8h2V6h2v2h6V6h2v2h2v2h2v2zm-8-2v2h2v-2zm-8 2h2v-2H7zm4 6H7v2h4zm6 0h-4v2h4z\"/></svg>";
-
 class CoverPhaser extends HTMLElement {
   constructor() {
     super();
@@ -21,6 +19,18 @@ class CoverPhaser extends HTMLElement {
         --yellow: gold;
         --pink: #000;
         --green: #a7c738;
+        --phaser-color: #965e97;
+      }
+
+      :host::after {
+        content: "";
+        inset: 0;
+        display: block;
+        position: absolute;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 80px #000 inset;
       }
 
       .container {
@@ -40,8 +50,8 @@ class CoverPhaser extends HTMLElement {
           content: "";
           background: linear-gradient(
             45deg,
-            var(--red) 0 50%,
-            var(--blue) 50% 100%
+            var(--phaser-color) 0 50%,
+            var(--phaser-color) 50% 100%
           );
           display: block;
           position: absolute;
@@ -82,31 +92,39 @@ class CoverPhaser extends HTMLElement {
         place-items: end;
         overflow: hidden;
 
-        &::before {
-          content: "";
-          background: var(--green);
-          display: block;
-          position: absolute;
-          width: 145%;
-          height: 20px;
-          transform-origin: 10% 0%;
-          rotate: 45deg;
-          z-index: 0;
-          display: none;
-        }
+        & .character {
+          --size: 150px;
 
-        & .invader {
+          border-radius: 50%;
+          width: var(--size);
+          height: var(--size);
+          background-color: var(--phaser-color);
+          border: 10px solid color-mix(in srgb, var(--phaser-color), #000 25%);
           position: absolute;
           z-index: 5;
-          fill: black;
-          display: none;
+          transform: translate(-45%, -45%);
 
-          & svg {
-            width: 96px;
-            height: 96px;
-            margin-right: 32px;
-            translate: 0 -8px;
-            opacity: 0.5;
+          & .face {
+            display: block;
+            width: 50%;
+            height: 50%;
+            background-color: #fff;
+            background-image:
+              linear-gradient(135deg, #e3cb89 65%, transparent 65.5%),
+              repeating-linear-gradient(45deg, transparent 0 20px, #ddd 20px 22px);
+            position: absolute;
+            left: 1rem;
+            transform: translate(46%, 66%);
+
+            &::before {
+              --size: 35px;
+
+              content: "";
+              display: block;
+              width: var(--size);
+              height: var(--size);
+              background-color: var(--phaser-color);
+            }
           }
         }
 
@@ -128,6 +146,7 @@ class CoverPhaser extends HTMLElement {
           position: absolute;
           z-index: 5;
           transform: translate(-50%, -50%);
+          display: none;
         }
       }
 
@@ -174,14 +193,14 @@ class CoverPhaser extends HTMLElement {
         background-image:
         linear-gradient(
           45deg,
-          var(--red) 0 20%,
-          color-mix(in srgb, var(--red), #000 15%) 20% 25%,
+          var(--phaser-color) 0 20%,
+          color-mix(in srgb, var(--phaser-color), #000 15%) 20% 25%,
           transparent 25%
         ),
         linear-gradient(
           225deg,
-          var(--blue) 0 20%,
-          color-mix(in srgb, var(--blue), #000 15%) 20% 25%,
+          var(--phaser-color) 0 20%,
+          color-mix(in srgb, var(--phaser-color), #000 15%) 20% 25%,
           transparent 25%
         ),
         linear-gradient(
@@ -215,8 +234,10 @@ class CoverPhaser extends HTMLElement {
       </header>
       <div class="lines"></div>
       <div class="overlay">
-        <div class="invader">${invader}</div>
         <div class="rocket"></div>
+        <div class="character">
+          <div class="face"></div>
+        </div>
       </div>
       <footer>Powered<br>by canvas</footer>
       <div class="ball"></div>
