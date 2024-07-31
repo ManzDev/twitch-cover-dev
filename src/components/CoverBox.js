@@ -9,6 +9,7 @@ import "./CoverWebComponents.js";
 import "./CoverFundamentos.js";
 import "./CoverSVG.js";
 import "./CoverNPM.js";
+import "./CoverDOM.js";
 import "./CoverTypescript.js";
 import "./CoverReact.js";
 import "./CoverAstro.js";
