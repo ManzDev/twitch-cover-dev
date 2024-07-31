@@ -1,4 +1,4 @@
-const F=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function a(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(e){if(e.ep)return;e.ep=!0;const r=a(e);fetch(e.href,r)}};F();class l extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+const B=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function a(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(e){if(e.ep)return;e.ep=!0;const r=a(e);fetch(e.href,r)}};B();class l extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -486,7 +486,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
     <style>${h.styles}</style>
     <div class="container">
-    </div>`}}customElements.define("retro-square",h);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("retro-square",h);class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -572,7 +572,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         right: 15px;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${v.styles}</style>
+    <style>${g.styles}</style>
     <div class="container">
       <retro-square></retro-square>
       <div class="title">
@@ -583,7 +583,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         Evil Martians
       </footer>
-    </div>`}}customElements.define("cover-postcss",v);class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-postcss",g);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -688,7 +688,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         padding: var(--cover-padding);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${g.styles}</style>
+    <style>${v.styles}</style>
     <div class="container">
       <div class="group">
         <h1>Javascript</h1>
@@ -698,7 +698,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="text">Untyped language</div>
       </footer>
-    </div>`}}customElements.define("cover-js",g);class f extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-js",v);class f extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1435,7 +1435,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </div>
         <footer></footer>
       </div>
-    </div>`}}customElements.define("cover-svg",u);const B=450,S=["#bbba","#aaaa","#999a","#777a","#555a"];class y extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-svg",u);const D=450,R=["#bbba","#aaaa","#999a","#777a","#555a"];class y extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1609,7 +1609,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         background: var(--color, #fff);
         position: absolute;
       }
-    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let a=0;a<120;a++){const i=document.createElement("div");t.appendChild(i)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let a=0;a<B;a++){const i=document.createElement("div");i.classList.add("star");const e=Math.floor(Math.random()*S.length),r=S[e],o=Math.floor(Math.random()*400),c=Math.floor(Math.random()*400),s=1+Math.floor(Math.random()*2);i.style.setProperty("--y",`${c}px`),i.style.setProperty("--x",`${o}px`),i.style.setProperty("--color",r),i.style.setProperty("--size",`${s}px`),t.appendChild(i)}}render(){this.shadowRoot.innerHTML=`
+    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let a=0;a<120;a++){const i=document.createElement("div");t.appendChild(i)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let a=0;a<D;a++){const i=document.createElement("div");i.classList.add("star");const e=Math.floor(Math.random()*R.length),r=R[e],o=Math.floor(Math.random()*400),c=Math.floor(Math.random()*400),s=1+Math.floor(Math.random()*2);i.style.setProperty("--y",`${c}px`),i.style.setProperty("--x",`${o}px`),i.style.setProperty("--color",r),i.style.setProperty("--size",`${s}px`),t.appendChild(i)}}render(){this.shadowRoot.innerHTML=`
     <style>${y.styles}</style>
     <div class="container">
 
@@ -1636,6 +1636,190 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       </div>
       <div class="stars"></div>
     </div>`}}customElements.define("cover-npm",y);class w extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --bgcolor: #223;
+        --cover-vinyl:
+          linear-gradient(to bottom, var(--bgcolor) 0% 29%, var(--bgcolor) 80% 100%);
+        --cover-padding: 10px 25px;
+      }
+
+      .container {
+        --sky-fade: radial-gradient(circle, transparent 10%, var(--bgcolor) 75%);
+        --sky-dots: radial-gradient(#fff4 12% 13%, transparent 14%);
+
+        width: 100%;
+        height: 100%;
+        background: var(--sky-fade), var(--sky-dots), url(asfalt-dark.png), var(--cover-vinyl);
+        background-size: 100% 100%, 14px 14px;
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          background: url(asfalt-dark.png);
+          opacity: 0.5;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          z-index: 5;
+        }
+      }
+
+      header {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h1 {
+          font-family: Fredoka, sans-serif;
+          font-size: 7rem;
+          margin: 0;
+          letter-spacing: 8px;
+          text-shadow: 0 0 15px #0006;
+        }
+
+        & h2 {
+          font-family: Jost, sans-serif;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          margin: 0;
+          line-height: 0;
+          text-shadow: 0 0 5px #000, 0 0 20px #000;
+        }
+      }
+
+      .bg {
+        display: grid;
+        place-items: center;
+        height: 100%;
+        margin-top: 2rem;
+        position: relative;
+
+        & .pyramid {
+          --size: 235px;
+
+          width: var(--size);
+          height: var(--size);
+          background: var(--bgcolor);
+          rotate: 45deg;
+          display: grid;
+          place-items: center;
+          position: absolute;
+          top: 50px;
+
+          &::after {
+            --degrees: 165deg;
+
+            content: "";
+            display: block;
+            width: 92%;
+            height: 92%;
+            background: var(--color);
+            background-image: conic-gradient(
+              from 0 at 0 0,
+              transparent 0 var(--degrees),
+              #c43e2244 calc(var(--degrees) + 1deg) 208deg
+            );
+          }
+        }
+
+        & .pyramid-1 {
+          --color: #c98742;
+          translate: -50% 0;
+        }
+        & .pyramid-2 {
+          --color: #c9b842;
+          z-index: 5;
+        }
+        & .pyramid-3 {
+          --color: #c98742;
+          translate: 50% 0;
+        }
+      }
+
+      /*
+      .circle {
+        --size: 300px;
+
+        width: var(--size);
+        height: var(--size);
+
+        position: absolute;
+        border-radius: 50%;
+        top: 25px;
+        left: calc(50% - calc(var(--size) / 2));
+      }
+      */
+
+      footer {
+        background: #fff;
+        background-image: linear-gradient(160deg, #fff 50%, #ccc4 50%);
+        position: absolute;
+        display: grid;
+        justify-content: center;
+        bottom: 0;
+        z-index: 5;
+        width: 100%;
+        height: 85px;
+
+        &::before {
+          content: "";
+          background: #1c1c2a;
+          display: block;
+          width: 100%;
+          height: 6px;
+          position: absolute;
+          top: -6px;
+          z-index: 6;
+        }
+
+        & h1 {
+          font-family: Jost, sans-serif;
+          font-size: 2.5rem;
+          margin: 0;
+          color: #224;
+        }
+
+        & h2 {
+          font-family: Fredoka, sans-serif;
+          font-size: 1.25rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          margin: 0;
+          line-height: 0;
+          color: #c98742;
+          translate: 0 -75%;
+        }
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${w.styles}</style>
+    <div class="container">
+      <header>
+        <h1>DOM</h1>
+        <h2>Document Object Model</h2>
+      </header>
+
+      <div class="circle"></div>
+
+      <div class="bg">
+        <div class="pyramid pyramid-1"></div>
+        <div class="pyramid pyramid-2"></div>
+        <div class="pyramid pyramid-3"></div>
+      </div>
+
+      <footer>
+        <h1>HTML DESDE JS</h1>
+        <h2>Es estructura, es contenido</h2>
+      </footer>
+    </div>`}}customElements.define("cover-dom",w);class z extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1786,7 +1970,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         margin: 0;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${w.styles}</style>
+    <style>${z.styles}</style>
     <div class="container">
       <div class="slogan-container ml-small">
         <div class="logo">Microsoft</div>
@@ -1804,7 +1988,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <div class="vhs js">JS</div>
         </div>
       </div>
-    </div>`}}customElements.define("cover-typescript",w);class z extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-typescript",z);class k extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1954,7 +2138,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           calc(1 * var(--size)) calc(7 * var(--size)) 0;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${z.styles}</style>
+    <style>${k.styles}</style>
     <div class="container">
       <div class="text-container">
         <div class="text-logo">
@@ -1970,7 +2154,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <div class="pixel"></div>
         </div>
       </div>
-    </div>`}}customElements.define("cover-react",z);class k extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-react",k);class M extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2097,7 +2281,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         margin: 0.7rem 0;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${k.styles}</style>
+    <style>${M.styles}</style>
     <div class="container">
       <header class="title">
         <h1>Astro<sup>TM</sup></h1>
@@ -2122,7 +2306,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <p>Zero-JS framework</p>
         </footer>
       </div>
-    </div>`}}customElements.define("cover-astro",k);class M extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-astro",M);class L extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2312,7 +2496,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${M.styles}</style>
+    <style>${L.styles}</style>
     <div class="container">
       <div class="left">
         <div class="top">
@@ -2338,7 +2522,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <div class="level level-3"></div>
         </div>
       </div>
-    </div>`}}customElements.define("cover-git",M);class L extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-git",L);class C extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2506,7 +2690,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         height: 10px;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${L.styles}</style>
+    <style>${C.styles}</style>
     <div class="container">
       <header>
         <h4>PROGRAMACI\xD3N BACKEND</h4>
@@ -2523,7 +2707,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </p>
         <div class="mini-gradient"></div>
       </footer>
-    </div>`}}customElements.define("cover-node-js",L);const C=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),R=(n,t)=>{const a=n*2+(n-2)*2,i=n-2,e=C[t],r=(7-t)/2,o=t/2,c=`--size: ${i}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,s="<div></div>".repeat(n+1),A=`<div class="central grid" style="${c}">${t<7?R(i,t+1):""}</div>`,T="<div></div>".repeat(a-(n+2)+1);return s+A+T};class E extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-node-js",C);const E=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),T=(n,t)=>{const a=n*2+(n-2)*2,i=n-2,e=E[t],r=(7-t)/2,o=t/2,c=`--size: ${i}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,s="<div></div>".repeat(n+1),A=`<div class="central grid" style="${c}">${t<7?T(i,t+1):""}</div>`,F="<div></div>".repeat(a-(n+2)+1);return s+A+F};class H extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2582,9 +2766,9 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         perspective: 600px;
 
         & > div:not(.central) {
-          background: var(--color, ${C[0]});
+          background: var(--color, ${E[0]});
           /* box-shadow: 0 0 5px 1px
-            color-mix(in srgb, var(--color, ${C[0]}), black 30%);*/
+            color-mix(in srgb, var(--color, ${E[0]}), black 30%);*/
           margin: var(--margin, 3.5px);
           border-radius: 1px;
           /* animation: resize 2s infinite alternate var(--delay, 0.5s); */
@@ -2601,14 +2785,14 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         to { transform: rotateX(80deg) }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${E.styles}</style>
+    <style>${H.styles}</style>
     <div class="container">
       <div class="title">TailwindCSS</div>
       <div class="subtitle">Clases de utilidad</div>
       <div class="grid parent-grid">
-        ${R(15,1)}
+        ${T(15,1)}
       </div>
-    </div>`}}customElements.define("cover-tailwind",E);const $={html:`
+    </div>`}}customElements.define("cover-tailwind",H);const j={html:`
   <svg viewBox="0 0 300 300">
     <path d="M50.362 263.638 28 12.747h245.983l-22.362 250.891L150.719 292" fill="#e34f26"/>
     <path d="m151.264 270.183 81.267-22.362 19.09-214.894H151.264" fill="#ef652a"/>
@@ -2628,7 +2812,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
     <path d="M104.3 89c-.8-4.5-3.7-8.3-12.5-11.9-3-1.4-6.5-2.4-7.5-4.7-.4-1.4-.4-2.1-.2-3 .7-2.6 3.8-3.4 6.3-2.7a7 7 0 0 1 4 3.8l7.4-4.7a18.6 18.6 0 0 0-2.4-3.2c-2.6-2.9-6.1-4.4-11.8-4.3l-3 .4c-2.7.7-5.4 2.2-7 4.2A13 13 0 0 0 80 81.5c5.6 4.3 14 5.2 15 9.2 1 4.9-3.6 6.5-8.1 5.9-3.4-.7-5.3-2.4-7.3-5.6L72 95.4c.9 2 1.8 3 3.4 4.6 7.2 7.4 25.3 7 28.6-4 .1-.5 1-3 .3-7zM66.9 59h-9.4v24c0 5.2.2 10-.6 11.4-1.4 2.8-4.9 2.4-6.5 1.9a8 8 0 0 1-3.5-3.6l-.5-.8-7.6 4.6a15 15 0 0 0 5.5 6.3c3.6 2.2 8.4 2.8 13.4 1.7 3.2-1 6-3 7.5-6C67.3 94.7 67 90 67 84.7V59z" fill="#323330"/>
   </svg>`,react:`
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"/><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3c.6-2.4 1.1-4.8 1.5-7.1c2.1-13.2-.2-22.5-6.6-26.1c-1.9-1.1-4-1.6-6.4-1.6c-7 0-15.9 5.2-24.9 13.9c-9-8.7-17.9-13.9-24.9-13.9c-2.4 0-4.5.5-6.4 1.6c-6.4 3.7-8.7 13-6.6 26.1c.4 2.3.9 4.7 1.5 7.1c-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3c-.6 2.4-1.1 4.8-1.5 7.1c-2.1 13.2.2 22.5 6.6 26.1c1.9 1.1 4 1.6 6.4 1.6c7.1 0 16-5.2 24.9-13.9c9 8.7 17.9 13.9 24.9 13.9c2.4 0 4.5-.5 6.4-1.6c6.4-3.7 8.7-13 6.6-26.1c-.4-2.3-.9-4.7-1.5-7.1c2.4-.7 4.7-1.4 6.9-2.3c12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3c-.3 2.1-.8 4.3-1.4 6.6c-5.2-1.2-10.7-2-16.5-2.5c-3.4-4.8-6.9-9.1-10.4-13c7.4-7.3 14.9-12.3 21-12.3c1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6c-3.7.3-7.4.4-11.2.4c-3.9 0-7.6-.1-11.2-.4c-2.2-3.2-4.2-6.4-6-9.6c-1.9-3.3-3.7-6.7-5.3-10c1.6-3.3 3.4-6.7 5.3-10c1.8-3.2 3.9-6.4 6.1-9.6c3.7-.3 7.4-.4 11.2-.4c3.9 0 7.6.1 11.2.4c2.2 3.2 4.2 6.4 6 9.6c1.9 3.3 3.7 6.7 5.3 10c-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3c-3.4.8-7 1.4-10.8 1.9c1.2-1.9 2.5-3.9 3.6-6c1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3c2.3.1 4.6.2 6.9.2c2.3 0 4.6-.1 6.9-.2c-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9c1.1-3.3 2.3-6.8 3.8-10.3c1.1 2 2.2 4.1 3.4 6.1c1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3c3.4-.8 7-1.4 10.8-1.9c-1.2 1.9-2.5 3.9-3.6 6c-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3c-2.3-.1-4.6-.2-6.9-.2c-2.3 0-4.6.1-6.9.2c2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9c-1.1 3.3-2.3 6.8-3.8 10.3c-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3c1-.6 2.2-.9 3.5-.9c6 0 13.5 4.9 21 12.3c-3.5 3.8-7 8.2-10.4 13c-5.8.5-11.3 1.4-16.5 2.5c-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4c2-.8 4.2-1.5 6.4-2.1c1.6 5 3.6 10.3 6 15.6c-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3c.3-2.1.8-4.3 1.4-6.6c5.2 1.2 10.7 2 16.5 2.5c3.4 4.8 6.9 9.1 10.4 13c-7.4 7.3-14.9 12.3-21 12.3c-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3c-1 .6-2.2.9-3.5.9c-6 0-13.5-4.9-21-12.3c3.5-3.8 7-8.2 10.4-13c5.8-.5 11.3-1.4 16.5-2.5c.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1c-1.6-5-3.6-10.3-6-15.6c2.4-5.3 4.5-10.5 6-15.5c13.8 4 22.1 10 22.1 15.6c0 4.7-5.8 9.7-15.7 13.4z"/></g></svg>
-`,npm:`
+`,dom:"<svg></svg>",npm:`
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="540px" height="210px" viewBox="0 0 18 7">
 <path fill="#CB3837" d="M0,0h18v6H9v1H5V6H0V0z M1,5h2V2h1v3h1V1H1V5z M6,1v5h2V5h2V1H6z M8,2h1v2H8V2z M11,1v4h2V2h1v3h1V2h1v3h1V1H11z"/>
 <polygon fill="#FFFFFF" points="1,5 3,5 3,2 4,2 4,5 5,5 5,1 1,1 "/>
@@ -2653,7 +2837,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 
   <title>SVG Logo</title>
   <desc>Designed for the SVG Logo Contest in 2006 by Harvey Rayner, and adopted by W3C in 2009. It is available under the Creative Commons license for those who have an SVG product or who are using SVG on their site.</desc>
- 
+
    <metadata id="license">
      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/">
        <cc:Work rdf:about="">
@@ -2679,7 +2863,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
        </cc:License>
      </rdf:RDF>
    </metadata>
-   
+
 
    <defs>
      <g id="SVG" fill="#ffffff" transform="scale(2) translate(20,79)">
@@ -2719,7 +2903,7 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 </svg>
   `,typescript:`
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="380" viewBox="0 0 512 512" width="380"><rect fill="#3178c6" height="512" rx="50" width="512"/><rect fill="#3178c6" height="512" rx="50" width="512"/><path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="#fff" fill-rule="evenodd"/></svg>
-`};class H extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+`};class S extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --cover-size: 400px;
       }
@@ -2751,9 +2935,9 @@ const F=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translateX(250px);
       }
     `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const t=this.shadowRoot.querySelector(".container"),a=document.createElement(`cover-${this.logo}`);a.classList.add("box"),t.insertAdjacentElement("afterbegin",a)}render(){this.shadowRoot.innerHTML=`
-    <style>${H.styles}</style>
+    <style>${S.styles}</style>
 
     <div class="container">
-      ${$[this.logo]}
+      ${j[this.logo]}
     </div>
-    `}}customElements.define("cover-box",H);
+    `}}customElements.define("cover-box",S);
