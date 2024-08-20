@@ -14,6 +14,7 @@ import "./CoverTypescript.js";
 import "./CoverReact.js";
 import "./CoverAstro.js";
 import "./CoverGit.js";
+import "./CoverAnimations.js";
 import "./CoverNodeJS.js";
 import "./CoverTailwind.js";
 import { LOGOS } from "../modules/logos.js";
