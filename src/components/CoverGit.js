@@ -42,6 +42,7 @@ class CoverGit extends HTMLElement {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+	width: fit-content;
 
         & .top {
           margin-top: 5.8rem;
