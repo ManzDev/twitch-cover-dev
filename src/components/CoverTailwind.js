@@ -105,7 +105,7 @@ class CoverTailwind extends HTMLElement {
             color-mix(in srgb, var(--color, ${COLORS[0]}), black 30%);*/
           margin: var(--margin, 3.5px);
           border-radius: 1px;
-          /* animation: resize 2s infinite alternate var(--delay, 0.5s); */
+          animation: resize 2s infinite alternate var(--delay, 0.5s);
         }
 
         & .central {
