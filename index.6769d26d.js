@@ -1,4 +1,4 @@
-const $=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&a(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(e){if(e.ep)return;e.ep=!0;const r=i(e);fetch(e.href,r)}};$();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+const V=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&a(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(e){if(e.ep)return;e.ep=!0;const r=i(e);fetch(e.href,r)}};V();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -790,7 +790,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="text">$ su manzdev</div>
       </footer>
-    </div>`}}customElements.define("cover-terminal",f);class m extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-terminal",f);class x extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -906,7 +906,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       }
 
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${m.styles}</style>
+    <style>${x.styles}</style>
     <div class="container">
 
       <div class="logo-container">
@@ -939,7 +939,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         <div class="caption">Curva de aprendizaje baja</div>
       </div>
 
-    </div>`}}customElements.define("cover-vue",m);class x extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-vue",x);class m extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1049,7 +1049,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         background: linear-gradient(to right, #131313 0%, transparent);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${x.styles}</style>
+    <style>${m.styles}</style>
     <div class="container">
       <header>
         <div class="title">WebComponents</div>
@@ -1060,7 +1060,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="subtitle">HTML, CSS & Javascript</div>
       </footer>
-    </div>`}}customElements.define("cover-webcomponents",x);class b extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-webcomponents",m);class b extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1435,7 +1435,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </div>
         <footer></footer>
       </div>
-    </div>`}}customElements.define("cover-svg",u);const j=450,A=["#bbba","#aaaa","#999a","#777a","#555a"];class y extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-svg",u);const G=450,F=["#bbba","#aaaa","#999a","#777a","#555a"];class y extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1609,7 +1609,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         background: var(--color, #fff);
         position: absolute;
       }
-    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const a=document.createElement("div");t.appendChild(a)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let i=0;i<j;i++){const a=document.createElement("div");a.classList.add("star");const e=Math.floor(Math.random()*A.length),r=A[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);a.style.setProperty("--y",`${s}px`),a.style.setProperty("--x",`${o}px`),a.style.setProperty("--color",r),a.style.setProperty("--size",`${l}px`),t.appendChild(a)}}render(){this.shadowRoot.innerHTML=`
+    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const a=document.createElement("div");t.appendChild(a)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let i=0;i<G;i++){const a=document.createElement("div");a.classList.add("star");const e=Math.floor(Math.random()*F.length),r=F[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);a.style.setProperty("--y",`${s}px`),a.style.setProperty("--x",`${o}px`),a.style.setProperty("--color",r),a.style.setProperty("--size",`${l}px`),t.appendChild(a)}}render(){this.shadowRoot.innerHTML=`
     <style>${y.styles}</style>
     <div class="container">
 
@@ -2158,6 +2158,129 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
+        --cover-vinyl:
+          linear-gradient(to bottom, var(--bgcolor) 0% 29%, var(--bgcolor) 80% 100%);
+        --cover-padding: 10px 25px;
+        --bgcolor: #1d1814;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: url(asfalt-dark.png), var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+        overflow: hidden;
+
+        &::after {
+          --offset: 8px;
+          --border: 2px;
+
+          content: "";
+          display: block;
+          width: calc(100% - (var(--border) * 2) - (var(--offset) * 2));
+          margin: auto;
+          height: calc(100% - (var(--border) * 2) - (var(--offset) * 2));
+          position: absolute;
+          top: var(--offset);
+          left: var(--offset);
+          border: var(--border) solid #1572b666;
+        }
+      }
+
+      header {
+        font-family: "Coda";
+        font-weight: bold;
+        font-size: 2rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 1rem;
+        margin-bottom: 5px;
+        line-height: 90%;
+        z-index: 4;
+        position: relative;
+        translate: 0 8px;
+      }
+
+      .title {
+        font-family: "Coda";
+        font-weight: bold;
+        font-size: 4.5rem;
+        text-align: center;
+        line-height: 100%;
+        background: linear-gradient(white 20%, #33a9dc 40%, #07273e 90%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        translate: 0 -5px;
+      }
+
+      .dots {
+        background: radial-gradient(circle 4px, #11588b 50%, transparent 60%);
+        background-size: 8px 8px;
+        width: calc(100% - 22px);
+        left: 12px;
+        height: 125px;
+        position: absolute;
+        top: 90px;
+        z-index: 0;
+      }
+
+      .cascade {
+        box-shadow: 0 0 25px 15px var(--bgcolor);
+        width: 150px;
+        margin: auto;
+        height: 225px;
+        background:
+          linear-gradient(
+            to bottom,
+            var(--bgcolor) 0 20px,
+            #33a9dc 20px 120px,
+            var(--bgcolor) 120px 124px,
+            #1572b6 124px 145px,
+            var(--bgcolor) 145px 150px,
+            #156dad 150px 165px,
+            var(--bgcolor) 165px 171px,
+            #11588b 171px 183px,
+            var(--bgcolor) 183px 188px,
+            #0d4269 188px 195px,
+            var(--bgcolor) 195px 200px,
+            #082d47 200px 205px,
+            var(--bgcolor) 205px 210px,
+            #07273e 210px 215px,
+            var(--bgcolor) 215px 218px,
+            #156dad 218px 220px,
+            var(--bgcolor) 220px 225px
+          );
+        display: grid;
+        justify-content: center;
+        translate: 0 -10px;
+      }
+
+      .subtitle {
+        font-family: Coda;
+        font-size: 1.2rem;
+        text-align: center;
+        color: #fff8;
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${M.styles}</style>
+    <div class="container">
+      <header>
+        CASCADA
+      </header>
+      <div class="dots"></div>
+
+      <div class="cascade">
+      </div>
+      <div class="title">CSS</div>
+      <div class="subtitle">Para tener estilo, s\xE9 espec\xEDfico.</div>
+    </div>`}}customElements.define("cover-cascade",M);class L extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
         --bgcolor: #081014;
         --cover-vinyl:
           linear-gradient(to bottom, var(--bgcolor) 0% 29%, var(--bgcolor) 80% 100%);
@@ -2281,7 +2404,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         margin: 0.7rem 0;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${M.styles}</style>
+    <style>${L.styles}</style>
     <div class="container">
       <header class="title">
         <h1>Astro<sup>TM</sup></h1>
@@ -2306,7 +2429,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <p>Zero-JS framework</p>
         </footer>
       </div>
-    </div>`}}customElements.define("cover-astro",M);class L extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-astro",L);class C extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2496,7 +2619,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${L.styles}</style>
+    <style>${C.styles}</style>
     <div class="container">
       <div class="left">
         <div class="top">
@@ -2522,7 +2645,133 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <div class="level level-3"></div>
         </div>
       </div>
-    </div>`}}customElements.define("cover-git",L);class C extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-git",C);class E extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --bgcolor: #0a1022;
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl:
+          linear-gradient(to bottom, var(--bgcolor) 0% 29%, var(--bgcolor) 80% 100%);
+        --cover-padding: 10px 25px;
+        overflow: hidden;
+      }
+
+      .grid {
+        --line: #121c3e;
+
+        background:
+          repeating-linear-gradient(to right, var(--line) 0 1px, transparent 1px 25px),
+          repeating-linear-gradient(to bottom, var(--line) 0 1px, transparent 1px 25px);
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: url(asfalt-dark.png), var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          inset: 0;
+          box-shadow:
+            0 0 20px 10px #000d inset,
+            0 0 10px #0004;
+          z-index: 10;
+        }
+      }
+
+      .box-container {
+        width: 80%;
+        height: 120%;
+        translate: 0% 6%;
+      }
+
+      svg {
+        fill: none;
+        stroke-width: 16px;
+      }
+
+      header {
+        padding-top: 1rem;
+        display: grid;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        translate: 0.5rem 0;
+      }
+
+      .title {
+        font-family: Xolonium;
+        font-weight: 800;
+        font-size: 3rem;
+        color: white;
+      }
+
+      .subtitle {
+        font-family: "Rubik";
+        font-size: 1.5rem;
+        letter-spacing: 1.1rem;
+        color: grey;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 1rem;
+        color: #999;
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        font-family: "Rubik";
+
+        & div {
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          background: var(--bgcolor);
+          text-align: center;
+        }
+      }
+
+      #road2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        translate: 84px 0;
+        scale: -1 1;
+        mix-blend-mode: hard-light;
+        opacity: 1;
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${E.styles}</style>
+    <div class="grid"></div>
+    <div class="container">
+      <header>
+        <span class="title">Asincron\xEDa</span>
+        <span class="subtitle">Javascript</span>
+      </header>
+      <div class="box-container">
+        <svg id="road" viewBox="0 0 231 414">
+          <path d="M1 8h114c60 0 108 48 108 108v298" stroke="#EDE52B"/>
+          <path d="M1 30h108c51 0 92 41 92 92v292" stroke="#EDCE2B" />
+          <path d="M1 52h105c40 0 73 33 73 73v289" stroke="#EDB62B" />
+          <path d="M1 74h102c30 0 54 24 54 54v286" stroke="#ED9F2B" />
+          <path d="m1 96 98-0C119 96 135 112 135 132V414" stroke="#ED7E2B" />
+        </svg>
+        <svg id="road2" viewBox="0 0 231 414">
+          <use href="#road" />
+        </svg>
+      </div>
+      <footer>
+        <div>Aprender\xE1s. Es una promesa.</div>
+      </footer>
+    </div>`}}customElements.define("cover-async",E);class H extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         position: absolute;
         top: var(--y);
@@ -2600,9 +2849,9 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translate(30%, 30%) rotate(-15deg);
       }
     `}enableAnimation(){this.shadowRoot.querySelector(":host(:not(.dark)) .ball").animate([{translate:"0 -10px"},{translate:"0 20px"}],{duration:500,easing:"ease-in",iterations:1/0,direction:"alternate"})}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${C.styles}</style>
+    <style>${H.styles}</style>
     <div class="ball"></div>
-    <div class="shadow"></div>`}}customElements.define("retro-ball",C);class E extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    <div class="shadow"></div>`}}customElements.define("retro-ball",H);class S extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --bgcolor: #111;
         --width: var(--cover-size);
@@ -2719,7 +2968,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${E.styles}</style>
+    <style>${S.styles}</style>
     <div class="container">
 
       <header>
@@ -2749,7 +2998,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="brand">W3C</div>
       </footer>
-    </div>`}}customElements.define("cover-animations",E);class H extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-animations",S);class R extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2917,7 +3166,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         height: 10px;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${H.styles}</style>
+    <style>${R.styles}</style>
     <div class="container">
       <header>
         <h4>PROGRAMACI\xD3N BACKEND</h4>
@@ -2934,7 +3183,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </p>
         <div class="mini-gradient"></div>
       </footer>
-    </div>`}}customElements.define("cover-node-js",H);const S=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),F=(n,t)=>{const i=n*2+(n-2)*2,a=n-2,e=S[t],r=(7-t)/2,o=t/2,s=`--size: ${a}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,l="<div></div>".repeat(n+1),B=`<div class="central grid" style="${s}">${t<7?F(a,t+1):""}</div>`,D="<div></div>".repeat(i-(n+2)+1);return l+B+D};class R extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-node-js",R);const T=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),D=(n,t)=>{const i=n*2+(n-2)*2,a=n-2,e=T[t],r=(7-t)/2,o=t/2,s=`--size: ${a}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,l="<div></div>".repeat(n+1),j=`<div class="central grid" style="${s}">${t<7?D(a,t+1):""}</div>`,$="<div></div>".repeat(i-(n+2)+1);return l+j+$};class A extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2993,12 +3242,12 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         perspective: 600px;
 
         & > div:not(.central) {
-          background: var(--color, ${S[0]});
+          background: var(--color, ${T[0]});
           /* box-shadow: 0 0 5px 1px
-            color-mix(in srgb, var(--color, ${S[0]}), black 30%);*/
+            color-mix(in srgb, var(--color, ${T[0]}), black 30%);*/
           margin: var(--margin, 3.5px);
           border-radius: 1px;
-          /* animation: resize 2s infinite alternate var(--delay, 0.5s); */
+          animation: resize 2s infinite alternate var(--delay, 0.5s);
         }
 
         & .central {
@@ -3012,14 +3261,14 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         to { transform: rotateX(80deg) }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${R.styles}</style>
+    <style>${A.styles}</style>
     <div class="container">
       <div class="title">TailwindCSS</div>
       <div class="subtitle">Clases de utilidad</div>
       <div class="grid parent-grid">
-        ${F(15,1)}
+        ${D(15,1)}
       </div>
-    </div>`}}customElements.define("cover-tailwind",R);const V={html:`
+    </div>`}}customElements.define("cover-tailwind",A);const O={html:`
   <svg viewBox="0 0 300 300">
     <path d="M50.362 263.638 28 12.747h245.983l-22.362 250.891L150.719 292" fill="#e34f26"/>
     <path d="m151.264 270.183 81.267-22.362 19.09-214.894H151.264" fill="#ef652a"/>
@@ -3130,7 +3379,7 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 </svg>
   `,typescript:`
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="380" viewBox="0 0 512 512" width="380"><rect fill="#3178c6" height="512" rx="50" width="512"/><rect fill="#3178c6" height="512" rx="50" width="512"/><path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="#fff" fill-rule="evenodd"/></svg>
-`};class T extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+`,async:""};class B extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --cover-size: 400px;
       }
@@ -3162,9 +3411,9 @@ const $=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translateX(250px);
       }
     `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const t=this.shadowRoot.querySelector(".container"),i=document.createElement(`cover-${this.logo}`);i.classList.add("box"),t.insertAdjacentElement("afterbegin",i)}render(){this.shadowRoot.innerHTML=`
-    <style>${T.styles}</style>
+    <style>${B.styles}</style>
 
     <div class="container">
-      ${V[this.logo]}
+      ${O[this.logo]}
     </div>
-    `}}customElements.define("cover-box",T);
+    `}}customElements.define("cover-box",B);
