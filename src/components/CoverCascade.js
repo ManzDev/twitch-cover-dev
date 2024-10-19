@@ -53,26 +53,14 @@ class CoverCascade extends HTMLElement {
         line-height: 90%;
         z-index: 4;
         position: relative;
-        translate: 0 8px;
-      }
-
-      .title {
-        font-family: "Coda";
-        font-weight: bold;
-        font-size: 4.5rem;
-        text-align: center;
-        line-height: 100%;
-        background: linear-gradient(white 20%, #33a9dc 40%, #07273e 90%);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        translate: 0 -5px;
+        translate: 0 12px;
       }
 
       .dots {
-        background: radial-gradient(circle 4px, #11588b 50%, transparent 60%);
-        background-size: 8px 8px;
+        background: radial-gradient(circle 4px, #174b6f 7px, transparent 60%);
+        background-size: 14px 14px;
         width: calc(100% - 22px);
-        left: 12px;
+        left: 11px;
         height: 125px;
         position: absolute;
         top: 90px;
@@ -81,33 +69,80 @@ class CoverCascade extends HTMLElement {
 
       .cascade {
         box-shadow: 0 0 25px 15px var(--bgcolor);
-        width: 150px;
+        width: 160px;
         margin: auto;
-        height: 225px;
-        background:
-          linear-gradient(
-            to bottom,
-            var(--bgcolor) 0 20px,
-            #33a9dc 20px 120px,
-            var(--bgcolor) 120px 124px,
-            #1572b6 124px 145px,
-            var(--bgcolor) 145px 150px,
-            #156dad 150px 165px,
-            var(--bgcolor) 165px 171px,
-            #11588b 171px 183px,
-            var(--bgcolor) 183px 188px,
-            #0d4269 188px 195px,
-            var(--bgcolor) 195px 200px,
-            #082d47 200px 205px,
-            var(--bgcolor) 205px 210px,
-            #07273e 210px 215px,
-            var(--bgcolor) 215px 218px,
-            #156dad 218px 220px,
-            var(--bgcolor) 220px 225px
+        height: 185px;
+        background: #fff;
+        background-image:
+          linear-gradient(to bottom,
+            #fff 0 60px,
+            var(--bgcolor) 60px 65px,
+            #d3d3d3 65px 97px,
+            var(--bgcolor) 97px 103px,
+            #bebebe 103px 128px,
+            var(--bgcolor) 128px 136px,
+            #a7a7a7 136px 154px,
+            var(--bgcolor) 154px 164px,
+            #666 164px 174px
           );
         display: grid;
         justify-content: center;
-        translate: 0 -10px;
+        translate: 0 18px;
+      }
+
+      .clouds {
+        width: 225px;
+        height: 70px;
+        position: relative;
+        margin: auto;
+        z-index: 5;
+        display: grid;
+        translate: 0 -12px;
+
+        & .center {
+          display: grid;
+          justify-self: center;
+          background: white;
+          width: 100px;
+          border-radius: 100px 100px 0 0;
+          height: 100%;
+
+          &::before, &::after {
+            content: "";
+            display: block;
+            align-self: end;
+            border-radius: 100px 100px 0 0;
+            width: 100px;
+            height: 75%;
+            position: absolute;
+            left: 0;
+            background: white;
+          }
+
+          &::after {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+
+      .water-container {
+        width: 56%;
+        margin: auto;
+        height: 50px;
+        display: grid;
+        translate: 0 -6px;
+
+        & .item {
+          width: var(--size, 100%);
+          background: var(--color, #76c0cd);
+          height: 10px;
+          margin: auto;
+          border-radius: 4px;
+        }
+
+        & .item:nth-child(2) { --color: #5e919b; --size: 85%; }
+        & .item:nth-child(3) { --color: #3c5357; --size: 60%; }
       }
 
       .subtitle {
@@ -115,6 +150,9 @@ class CoverCascade extends HTMLElement {
         font-size: 1.2rem;
         text-align: center;
         color: #fff8;
+        position: absolute;
+        width: 100%;
+        bottom: 1.2rem;
       }
     `;
   }
@@ -128,13 +166,18 @@ class CoverCascade extends HTMLElement {
     <style>${CoverCascade.styles}</style>
     <div class="container">
       <header>
-        CASCADA
+        CASCADA CSS
       </header>
       <div class="dots"></div>
-
-      <div class="cascade">
+      <div class="cascade"></div>
+      <div class="clouds">
+        <div class="center"></div>
       </div>
-      <div class="title">CSS</div>
+      <div class="water-container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
       <div class="subtitle">Para tener estilo, sé específico.</div>
     </div>`;
   }
