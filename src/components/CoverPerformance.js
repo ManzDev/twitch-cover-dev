@@ -15,8 +15,8 @@ class CoverPerformance extends HTMLElement {
           var(--secondary-color) 35%
         );
         --cover-padding: 10px 25px;
-        --primary-color: #f9edbd;
-        --secondary-color: #190e2c;
+        --primary-color: #5f5bbe;
+        --secondary-color: #261347;
       }
 
       .container {
@@ -56,7 +56,7 @@ class CoverPerformance extends HTMLElement {
           }
 
           & .bar:nth-child(1) {
-            translate: 0;
+            translate: 0 1.3rem;
           }
         }
 
@@ -68,13 +68,7 @@ class CoverPerformance extends HTMLElement {
           font-size: 2.85rem;
           width: min-content;
           margin: 0;
-          background: linear-gradient(
-            0.375turn,
-            var(--secondary-color) 48%,
-            #fff 48%
-          );
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: #fff;
           z-index: 5;
 
           & span {
@@ -93,7 +87,7 @@ class CoverPerformance extends HTMLElement {
           --size: 200px;
 
           opacity: 0.3;
-          color: #888;
+          color: #8151a8;
           width: var(--size);
           height: var(--size);
         }
@@ -108,7 +102,7 @@ class CoverPerformance extends HTMLElement {
           font-size: 1.4rem;
           max-width: 300px;
           text-transform: uppercase;
-          color: var(--primary-color);
+          color: #ccc;
           margin: 0.75rem 1.25rem;
           text-align: right;
           font-weight: 600;
@@ -152,7 +146,7 @@ class CoverPerformance extends HTMLElement {
       }
 
       .endline {
-        --color: #f83436;
+        --color: #b00c7b;
 
         background:
           linear-gradient(
@@ -182,10 +176,10 @@ class CoverPerformance extends HTMLElement {
     <div class="container">
       <header>
         <div class="bars">
-          <div class="bar" style="--color:#f83436"></div>
-          <div class="bar" style="--color:#ed8c2b"></div>
-          <div class="bar" style="--color:#f83436"></div>
-          <div class="bar" style="--color:#ed8c2b"></div>
+          <div class="bar" style="--color:#57178a"></div>
+          <div class="bar" style="--color:#b00c7b"></div>
+          <div class="bar" style="--color:#57178a"></div>
+          <div class="bar" style="--color:#b00c7b"></div>
         </div>
         <h1>Rendimiento <span>web</span></h1>
       </header>
