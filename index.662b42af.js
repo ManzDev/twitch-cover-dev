@@ -1,4 +1,4 @@
-const V=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function a(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(e){if(e.ep)return;e.ep=!0;const r=a(e);fetch(e.href,r)}};V();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+const P=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&a(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(e){if(e.ep)return;e.ep=!0;const r=i(e);fetch(e.href,r)}};P();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -486,7 +486,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
     <style>${h.styles}</style>
     <div class="container">
-    </div>`}}customElements.define("retro-square",h);class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("retro-square",h);class f extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -572,7 +572,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         right: 15px;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${g.styles}</style>
+    <style>${f.styles}</style>
     <div class="container">
       <retro-square></retro-square>
       <div class="title">
@@ -583,7 +583,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         Evil Martians
       </footer>
-    </div>`}}customElements.define("cover-postcss",g);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-postcss",f);class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -688,7 +688,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         padding: var(--cover-padding);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${v.styles}</style>
+    <style>${g.styles}</style>
     <div class="container">
       <div class="group">
         <h1>Javascript</h1>
@@ -698,7 +698,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="text">Untyped language</div>
       </footer>
-    </div>`}}customElements.define("cover-js",v);class f extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-js",g);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -781,7 +781,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translate(-10px, 10px);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${f.styles}</style>
+    <style>${v.styles}</style>
     <div class="container">
       <div class="group">
         <h2>Terminal de</h2>
@@ -790,7 +790,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="text">$ su manzdev</div>
       </footer>
-    </div>`}}customElements.define("cover-terminal",f);class x extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-terminal",v);class x extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1435,7 +1435,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </div>
         <footer></footer>
       </div>
-    </div>`}}customElements.define("cover-svg",u);const G=450,F=["#bbba","#aaaa","#999a","#777a","#555a"];class y extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-svg",u);const J=450,j=["#bbba","#aaaa","#999a","#777a","#555a"];class y extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1609,7 +1609,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         background: var(--color, #fff);
         position: absolute;
       }
-    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let a=0;a<120;a++){const i=document.createElement("div");t.appendChild(i)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let a=0;a<G;a++){const i=document.createElement("div");i.classList.add("star");const e=Math.floor(Math.random()*F.length),r=F[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);i.style.setProperty("--y",`${s}px`),i.style.setProperty("--x",`${o}px`),i.style.setProperty("--color",r),i.style.setProperty("--size",`${l}px`),t.appendChild(i)}}render(){this.shadowRoot.innerHTML=`
+    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const a=document.createElement("div");t.appendChild(a)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let i=0;i<J;i++){const a=document.createElement("div");a.classList.add("star");const e=Math.floor(Math.random()*j.length),r=j[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);a.style.setProperty("--y",`${s}px`),a.style.setProperty("--x",`${o}px`),a.style.setProperty("--color",r),a.style.setProperty("--size",`${l}px`),t.appendChild(a)}}render(){this.shadowRoot.innerHTML=`
     <style>${y.styles}</style>
     <div class="container">
 
@@ -2154,7 +2154,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <div class="pixel"></div>
         </div>
       </div>
-    </div>`}}customElements.define("cover-react",k);class M extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-react",k);class C extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2304,7 +2304,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         bottom: 1.2rem;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${M.styles}</style>
+    <style>${C.styles}</style>
     <div class="container">
       <header>
         CASCADA CSS
@@ -2320,7 +2320,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         <div class="item"></div>
       </div>
       <div class="subtitle">Para tener estilo, s\xE9 espec\xEDfico.</div>
-    </div>`}}customElements.define("cover-cascade",M);class L extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-cascade",C);class M extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2447,7 +2447,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         margin: 0.7rem 0;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${L.styles}</style>
+    <style>${M.styles}</style>
     <div class="container">
       <header class="title">
         <h1>Astro<sup>TM</sup></h1>
@@ -2472,7 +2472,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <p>Zero-JS framework</p>
         </footer>
       </div>
-    </div>`}}customElements.define("cover-astro",L);class C extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-astro",M);class L extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -2662,7 +2662,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${C.styles}</style>
+    <style>${L.styles}</style>
     <div class="container">
       <div class="left">
         <div class="top">
@@ -2688,7 +2688,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <div class="level level-3"></div>
         </div>
       </div>
-    </div>`}}customElements.define("cover-git",C);class E extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-git",L);class E extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --bgcolor: #0a1022;
         --width: var(--cover-size);
@@ -2816,6 +2816,466 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       </footer>
     </div>`}}customElements.define("cover-async",E);class H extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl: linear-gradient(
+          0.375turn,
+          var(--primary-color) 34.9%,
+          var(--secondary-color) 35%
+        );
+        --cover-padding: 10px 25px;
+        --primary-color: #f9edbd;
+        --secondary-color: #190e2c;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: url(asfalt-dark.png), var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+        display: grid;
+        align-content: space-between;
+      }
+
+      header {
+        display: grid;
+        justify-content: end;
+        font-family: Jost;
+
+        & .bars {
+          width: 200px;
+          height: 325px;
+          position: absolute;
+          display: flex;
+          gap: 1rem;
+          translate: 10px 0;
+          clip-path: polygon(0 0, 100% 0, 100% 37%, 0 100%);
+
+          & .bar {
+            width: 40px;
+            height: 100%;
+            translate: 0 4.5rem;
+            background: linear-gradient(
+              to right,
+              var(--color, grey) 50%,
+              color-mix(in srgb, var(--color, grey), white 25%) 50%
+            )
+          }
+
+          & .bar:nth-child(1) {
+            translate: 0;
+          }
+        }
+
+        & h1 {
+          padding: 1rem;
+          text-transform: uppercase;
+          line-height: 100%;
+          text-align: right;
+          font-size: 2.85rem;
+          width: min-content;
+          margin: 0;
+          background: linear-gradient(
+            0.375turn,
+            var(--secondary-color) 48%,
+            #fff 48%
+          );
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          z-index: 5;
+
+          & span {
+            line-height: 100%;
+            font-size: 4rem;
+          }
+        }
+      }
+
+      .center {
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+
+        & svg {
+          --size: 200px;
+
+          opacity: 0.3;
+          color: #888;
+          width: var(--size);
+          height: var(--size);
+        }
+      }
+
+      footer {
+        display: grid;
+        justify-content: end;
+        font-family: Jost;
+
+        & h2 {
+          font-size: 1.4rem;
+          max-width: 300px;
+          text-transform: uppercase;
+          color: var(--primary-color);
+          margin: 0.75rem 1.25rem;
+          text-align: right;
+          font-weight: 600;
+          line-height: 110%;
+          translate: 0 -30px;
+
+          & span {
+            color: #ed8c2b;
+          }
+        }
+
+      }
+
+      .stars {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 4rem;
+        left: 4rem;
+
+        & svg {
+          scale: 0.5;
+          position: absolute;
+
+          & path {
+            fill: #fff;
+          }
+        }
+
+        & svg:nth-child(2) {
+          scale: 0.25;
+          translate: -50px -60px;
+          opacity: 0.7;
+        }
+
+        & svg:nth-child(3) {
+          scale: 0.1;
+          translate: -10px -40px;
+          opacity: 0.7;
+        }
+      }
+
+      .endline {
+        --color: #f83436;
+
+        background:
+          linear-gradient(
+            to bottom,
+            var(--color) 0 30%,
+            transparent 25% 45%,
+            color-mix(in srgb, var(--color), transparent 50%) 45% 55%,
+            transparent 55% 75%,
+            color-mix(in srgb, var(--color), transparent 75%) 75% 80%,
+            transparent 80%
+          );
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        bottom: 5px;
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${H.styles}</style>
+    <div class="container">
+      <header>
+        <div class="bars">
+          <div class="bar" style="--color:#f83436"></div>
+          <div class="bar" style="--color:#ed8c2b"></div>
+          <div class="bar" style="--color:#f83436"></div>
+          <div class="bar" style="--color:#ed8c2b"></div>
+        </div>
+        <h1>Rendimiento <span>web</span></h1>
+      </header>
+      <div class="center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 16a3 3 0 0 1-3-3c0-1.12.61-2.1 1.5-2.61l9.71-5.62l-5.53 9.58c-.5.98-1.51 1.65-2.68 1.65m0-13c1.81 0 3.5.5 4.97 1.32l-2.1 1.21C14 5.19 13 5 12 5a8 8 0 0 0-8 8c0 2.21.89 4.21 2.34 5.65h.01c.39.39.39 1.02 0 1.41s-1.03.39-1.42.01A9.97 9.97 0 0 1 2 13A10 10 0 0 1 12 3m10 10c0 2.76-1.12 5.26-2.93 7.07c-.39.38-1.02.38-1.41-.01a.996.996 0 0 1 0-1.41A7.95 7.95 0 0 0 20 13c0-1-.19-2-.54-2.9L20.67 8C21.5 9.5 22 11.18 22 13"/></svg>
+      </div>
+      <footer>
+        <h2>Alcanza mayor \xABPerfor<span>manz</span>\xBB</h2>
+        <div class="bars"></div>
+      </footer>
+      <div class="stars">
+        <svg id="star" viewBox="0 0 80 106"><path d="m40 0 9 41 31 12-31 12-9 41-9-41L0 53l31-12z" fill="currentColor"/></svg>
+        <svg><use href="#star" /></svg>
+        <svg><use href="#star" /></svg>
+      </div>
+      <div class="endline"></div>
+    </div>`}}customElements.define("cover-performance",H);class S extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --line: #26262633;
+        --color: transparent;
+        --size: 20px;
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl:
+          repeating-linear-gradient(
+            var(--line) 0px 1px,
+            transparent 1px 19px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            var(--line) 0px 1px,
+            var(--color) 1px 19px
+          ),
+          linear-gradient(to bottom, #737a72 50%, #121317 50%);
+        --cover-padding: 10px 25px;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: url(asfalt-dark.png), var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          display: none;
+          position: absolute;
+          inset: 0;
+          box-shadow:
+            0 0 20px 10px #000d inset,
+            0 0 10px #0004;
+          z-index: 10;
+        }
+      }
+
+      header {
+        height: 50%;
+        display: grid;
+
+        & h1 {
+          font-family: Jost, sans-serif;
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          width: min-content;
+          line-height: 250%;
+          color: #fff;
+          justify-self: center;
+          background: linear-gradient(
+            #444 88%,
+            transparent 88% 90%,
+            #4449 88% 93%,
+            transparent 93% 96%,
+            #4446 96% 98%,
+            transparent 97% 99%,
+            #4443 99%
+          );
+          padding: 0 0.75rem;
+          margin: 0;
+          text-align: center;
+          scale: 1;
+          height: 100px;
+
+          & span {
+            font-size: 7rem;
+            line-height: 50%;
+            text-shadow: 0 0 5px #444d;
+          }
+        }
+
+        & .barcode {
+          display: grid;
+          width: 125px;
+          height: 50px;
+          margin: auto;
+          translate: 0 -10px;
+          text-align: center;
+          align-items: end;
+          color: #fff;
+          font-family: Jost;
+          display: none;
+
+          & .lines {
+            background: linear-gradient(
+              to right,
+              #fff 0%,
+              #fff 2%,
+              transparent 2%,
+              transparent 4%,
+              #fff 4%,
+              #fff 6%,
+              transparent 6%,
+              transparent 10%,
+              #fff 10%,
+              #fff 12%,
+              transparent 12%,
+              transparent 14%,
+              #fff 14%,
+              #fff 18%,
+              transparent 18%,
+              transparent 20%,
+              #fff 20%,
+              #fff 24%,
+              transparent 24%,
+              transparent 26%,
+              #fff 26%,
+              #fff 28%,
+              transparent 28%,
+              transparent 30%,
+              #fff 30%,
+              #fff 34%,
+              transparent 34%,
+              transparent 36%,
+              #fff 36%,
+              #fff 40%,
+              transparent 40%,
+              transparent 42%,
+              #fff 42%,
+              #fff 44%,
+              transparent 44%,
+              transparent 46%,
+              #fff 46%,
+              #fff 50%,
+              transparent 50%,
+              transparent 52%,
+              #fff 52%,
+              #fff 54%,
+              transparent 54%,
+              transparent 58%,
+              #fff 58%,
+              #fff 60%,
+              transparent 60%,
+              transparent 62%,
+              #fff 62%,
+              #fff 66%,
+              transparent 66%,
+              transparent 68%,
+              #fff 68%,
+              #fff 72%,
+              transparent 72%,
+              transparent 74%,
+              #fff 74%,
+              #fff 78%,
+              transparent 78%,
+              transparent 80%,
+              #fff 80%,
+              #fff 84%,
+              transparent 84%,
+              transparent 86%,
+              #fff 86%,
+              #fff 90%,
+              transparent 90%,
+              transparent 94%,
+              #fff 94%,
+              #fff 100%
+            );
+            width: 100%;
+            height: 35px;
+          }
+        }
+      }
+
+      .tool {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        z-index: 20;
+
+        & svg {
+          translate: 20px -50%;
+          height: 60px;
+        }
+      }
+
+      .shine {
+        color: white;
+        font-size: 4rem;
+      }
+
+      footer {
+        height: 50%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        align-items: space-around;
+
+        & h2 {
+          color: #ccc;
+          font-family: Jost;
+          font-size: 1.75rem;
+          text-transform: uppercase;
+          margin: 0;
+          margin-bottom: 0.5rem;
+        }
+
+        & table {
+          --color: #554337;
+          border: 2px solid var(--color);
+          font-family: Jost;
+          text-align: center;
+          border-collapse: collapse;
+
+          & th, td {
+            border: 2px solid var(--color);
+          }
+
+          & th {
+            color: #ddd;
+          }
+
+          & td {
+            font-weight: bold;
+            color: var(--color);
+          }
+        }
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${S.styles}</style>
+    <div class="container">
+      <header>
+        <h1>Herramientas <span>CSS</span></h1>
+        <div class="barcode">
+          <div class="lines"></div>
+          <span>152762-51</span>
+        </div>
+      </header>
+      <div class="tool">
+        <svg viewBox="0 0 768 128">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="50%">
+            <stop offset="0%"  stop-color="#F64497"/>
+            <stop offset="13%" stop-color="#F94376"/>
+            <stop offset="14%" stop-color="#FF3755"/>
+            <stop offset="27%" stop-color="#FF3F47"/>
+            <stop offset="28%" stop-color="#E5732C"/>
+            <stop offset="41%" stop-color="#CC8C2B"/>
+            <stop offset="42%" stop-color="#DFBE33"/>
+            <stop offset="56%" stop-color="#6DA145"/>
+            <stop offset="57%" stop-color="#34773B"/>
+            <stop offset="70%" stop-color="#577DA1"/>
+            <stop offset="71%" stop-color="#506790"/>
+            <stop offset="84%" stop-color="#46557C"/>
+            <stop offset="85%" stop-color="#374665"/>
+            <stop offset="100%" stop-color="#33384C"/>
+          </linearGradient>
+        </defs>
+        <path d="M123 39a19 19 0 01-16-9C97 15 81 0 58 0 21 0 6 18 0 27c-1 2 0 4 3 4H38a8 8 0 017 4L59 60a8 8 0 010 8L45 93A8 8 0 0138 97H3c-2 0-4 3-3 4C6 110 21 128 58 128c23 0 39-15 49-31a19 19 0 0116-9h523a19 19 0 0116 9c10 16 25 31 49 31 37 0 52-18 57-27 1-2-0-4-3-4H730a8 8 0 01-7-4L709 68a8 8 0 010-8l15-25a8 8 0 017-4h35c2 0 4-3 3-4C762 18 747 0 710 0c-23 0-39 15-49 31a19 19 0 01-16 9h-523" fill="url(#gradient)"/></svg>
+      </div>
+      <footer>
+        <div class="shine"></div>
+        <h2>Mejorando tu CSS</h2>
+        <table>
+          <tr>
+            <th>LIB/FW</th>
+            <th>PreCSS</th>
+            <th>CLI</th>
+          </tr>
+          <tr>
+            <td>725KB</td>
+            <td>442KB</td>
+            <td>150KB</td>
+          </tr>
+        </table>
+      </footer>
+    </div>`}}customElements.define("cover-css-tools",S);class T extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
         position: absolute;
         top: var(--y);
         left: var(--x);
@@ -2892,9 +3352,9 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translate(30%, 30%) rotate(-15deg);
       }
     `}enableAnimation(){this.shadowRoot.querySelector(":host(:not(.dark)) .ball").animate([{translate:"0 -10px"},{translate:"0 20px"}],{duration:500,easing:"ease-in",iterations:1/0,direction:"alternate"})}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${H.styles}</style>
+    <style>${T.styles}</style>
     <div class="ball"></div>
-    <div class="shadow"></div>`}}customElements.define("retro-ball",H);class S extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    <div class="shadow"></div>`}}customElements.define("retro-ball",T);class A extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --bgcolor: #111;
         --width: var(--cover-size);
@@ -3011,7 +3471,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${S.styles}</style>
+    <style>${A.styles}</style>
     <div class="container">
 
       <header>
@@ -3041,7 +3501,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="brand">W3C</div>
       </footer>
-    </div>`}}customElements.define("cover-animations",S);class R extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-animations",A);class R extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3226,7 +3686,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </p>
         <div class="mini-gradient"></div>
       </footer>
-    </div>`}}customElements.define("cover-node-js",R);const T=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),D=(n,t)=>{const a=n*2+(n-2)*2,i=n-2,e=T[t],r=(7-t)/2,o=t/2,s=`--size: ${i}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,l="<div></div>".repeat(n+1),j=`<div class="central grid" style="${s}">${t<7?D(i,t+1):""}</div>`,$="<div></div>".repeat(a-(n+2)+1);return l+j+$};class A extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-node-js",R);const B=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),$=(n,t)=>{const i=n*2+(n-2)*2,a=n-2,e=B[t],r=(7-t)/2,o=t/2,s=`--size: ${a}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,l="<div></div>".repeat(n+1),V=`<div class="central grid" style="${s}">${t<7?$(a,t+1):""}</div>`,G="<div></div>".repeat(i-(n+2)+1);return l+V+G};class F extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3285,9 +3745,9 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         perspective: 600px;
 
         & > div:not(.central) {
-          background: var(--color, ${T[0]});
+          background: var(--color, ${B[0]});
           /* box-shadow: 0 0 5px 1px
-            color-mix(in srgb, var(--color, ${T[0]}), black 30%);*/
+            color-mix(in srgb, var(--color, ${B[0]}), black 30%);*/
           margin: var(--margin, 3.5px);
           border-radius: 1px;
           animation: resize 2s infinite alternate var(--delay, 0.5s);
@@ -3304,14 +3764,14 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         to { transform: rotateX(80deg) }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${A.styles}</style>
+    <style>${F.styles}</style>
     <div class="container">
       <div class="title">TailwindCSS</div>
       <div class="subtitle">Clases de utilidad</div>
       <div class="grid parent-grid">
-        ${D(15,1)}
+        ${$(15,1)}
       </div>
-    </div>`}}customElements.define("cover-tailwind",A);const O={html:`
+    </div>`}}customElements.define("cover-tailwind",F);const O={html:`
   <svg viewBox="0 0 300 300">
     <path d="M50.362 263.638 28 12.747h245.983l-22.362 250.891L150.719 292" fill="#e34f26"/>
     <path d="m151.264 270.183 81.267-22.362 19.09-214.894H151.264" fill="#ef652a"/>
@@ -3422,7 +3882,7 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 </svg>
   `,typescript:`
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="380" viewBox="0 0 512 512" width="380"><rect fill="#3178c6" height="512" rx="50" width="512"/><rect fill="#3178c6" height="512" rx="50" width="512"/><path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="#fff" fill-rule="evenodd"/></svg>
-`,async:""};class B extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+`,async:"","css-tools":"",performance:""};class D extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --cover-size: 400px;
       }
@@ -3453,10 +3913,10 @@ const V=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       .container .box:hover + svg {
         transform: translateX(250px);
       }
-    `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const t=this.shadowRoot.querySelector(".container"),a=document.createElement(`cover-${this.logo}`);a.classList.add("box"),t.insertAdjacentElement("afterbegin",a)}render(){this.shadowRoot.innerHTML=`
-    <style>${B.styles}</style>
+    `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const t=this.shadowRoot.querySelector(".container"),i=document.createElement(`cover-${this.logo}`);i.classList.add("box"),t.insertAdjacentElement("afterbegin",i)}render(){this.shadowRoot.innerHTML=`
+    <style>${D.styles}</style>
 
     <div class="container">
       ${O[this.logo]}
     </div>
-    `}}customElements.define("cover-box",B);
+    `}}customElements.define("cover-box",D);
