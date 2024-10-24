@@ -16,6 +16,8 @@ import "./CoverCascade.js";
 import "./CoverAstro.js";
 import "./CoverGit.js";
 import "./CoverAsync.js";
+import "./CoverPerformance.js";
+import "./CoverCSSTools.js";
 import "./CoverAnimations.js";
 import "./CoverNodeJS.js";
 import "./CoverTailwind.js";
