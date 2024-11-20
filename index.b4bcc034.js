@@ -1,4 +1,4 @@
-const P=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&a(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(e){if(e.ep)return;e.ep=!0;const r=i(e);fetch(e.href,r)}};P();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+const G=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const a of e)if(a.type==="childList")for(const o of a.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&r(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const a={};return e.integrity&&(a.integrity=e.integrity),e.referrerpolicy&&(a.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?a.credentials="include":e.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function r(e){if(e.ep)return;e.ep=!0;const a=i(e);fetch(e.href,a)}};G();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -583,7 +583,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         Evil Martians
       </footer>
-    </div>`}}customElements.define("cover-postcss",f);class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-postcss",f);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -688,7 +688,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         padding: var(--cover-padding);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${g.styles}</style>
+    <style>${v.styles}</style>
     <div class="container">
       <div class="group">
         <h1>Javascript</h1>
@@ -698,7 +698,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="text">Untyped language</div>
       </footer>
-    </div>`}}customElements.define("cover-js",g);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-js",v);class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -781,7 +781,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translate(-10px, 10px);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${v.styles}</style>
+    <style>${g.styles}</style>
     <div class="container">
       <div class="group">
         <h2>Terminal de</h2>
@@ -790,7 +790,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="text">$ su manzdev</div>
       </footer>
-    </div>`}}customElements.define("cover-terminal",v);class x extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-terminal",g);class x extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -980,7 +980,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       header .title {
         font-family: "Roboto Mono";
         font-weight: 800;
-        font-size: 3.2rem;
+        font-size: 3rem;
         letter-spacing: -2px;
         color: #fff;
         position: absolute;
@@ -1435,7 +1435,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </div>
         <footer></footer>
       </div>
-    </div>`}}customElements.define("cover-svg",u);const J=450,j=["#bbba","#aaaa","#999a","#777a","#555a"];class y extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-svg",u);const J=450,D=["#bbba","#aaaa","#999a","#777a","#555a"];class y extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1609,7 +1609,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         background: var(--color, #fff);
         position: absolute;
       }
-    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const a=document.createElement("div");t.appendChild(a)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let i=0;i<J;i++){const a=document.createElement("div");a.classList.add("star");const e=Math.floor(Math.random()*j.length),r=j[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);a.style.setProperty("--y",`${s}px`),a.style.setProperty("--x",`${o}px`),a.style.setProperty("--color",r),a.style.setProperty("--size",`${l}px`),t.appendChild(a)}}render(){this.shadowRoot.innerHTML=`
+    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const r=document.createElement("div");t.appendChild(r)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let i=0;i<J;i++){const r=document.createElement("div");r.classList.add("star");const e=Math.floor(Math.random()*D.length),a=D[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);r.style.setProperty("--y",`${s}px`),r.style.setProperty("--x",`${o}px`),r.style.setProperty("--color",a),r.style.setProperty("--size",`${l}px`),t.appendChild(r)}}render(){this.shadowRoot.innerHTML=`
     <style>${y.styles}</style>
     <div class="container">
 
@@ -3268,7 +3268,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           </tr>
         </table>
       </footer>
-    </div>`}}customElements.define("cover-css-tools",S);class T extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-css-tools",S);class B extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         position: absolute;
         top: var(--y);
@@ -3346,9 +3346,9 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translate(30%, 30%) rotate(-15deg);
       }
     `}enableAnimation(){this.shadowRoot.querySelector(":host(:not(.dark)) .ball").animate([{translate:"0 -10px"},{translate:"0 20px"}],{duration:500,easing:"ease-in",iterations:1/0,direction:"alternate"})}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${T.styles}</style>
+    <style>${B.styles}</style>
     <div class="ball"></div>
-    <div class="shadow"></div>`}}customElements.define("retro-ball",T);class A extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    <div class="shadow"></div>`}}customElements.define("retro-ball",B);class T extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --bgcolor: #111;
         --width: var(--cover-size);
@@ -3465,7 +3465,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${A.styles}</style>
+    <style>${T.styles}</style>
     <div class="container">
 
       <header>
@@ -3495,7 +3495,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="brand">W3C</div>
       </footer>
-    </div>`}}customElements.define("cover-animations",A);class R extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-animations",T);class R extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3680,7 +3680,7 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </p>
         <div class="mini-gradient"></div>
       </footer>
-    </div>`}}customElements.define("cover-node-js",R);const B=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),$=(n,t)=>{const i=n*2+(n-2)*2,a=n-2,e=B[t],r=(7-t)/2,o=t/2,s=`--size: ${a}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,l="<div></div>".repeat(n+1),V=`<div class="central grid" style="${s}">${t<7?$(a,t+1):""}</div>`,G="<div></div>".repeat(i-(n+2)+1);return l+V+G};class F extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-node-js",R);const A=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),$=(n,t)=>{const i=n*2+(n-2)*2,r=n-2,e=A[t],a=(7-t)/2,o=t/2,s=`--size: ${r}; --delay: ${o}s; --color: ${e}; --margin: ${a}px`,l="<div></div>".repeat(n+1),V=`<div class="central grid" style="${s}">${t<7?$(r,t+1):""}</div>`,P="<div></div>".repeat(i-(n+2)+1);return l+V+P};class F extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3739,9 +3739,9 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         perspective: 600px;
 
         & > div:not(.central) {
-          background: var(--color, ${B[0]});
+          background: var(--color, ${A[0]});
           /* box-shadow: 0 0 5px 1px
-            color-mix(in srgb, var(--color, ${B[0]}), black 30%);*/
+            color-mix(in srgb, var(--color, ${A[0]}), black 30%);*/
           margin: var(--margin, 3.5px);
           border-radius: 1px;
           animation: resize 2s infinite alternate var(--delay, 0.5s);
@@ -3811,33 +3811,6 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
   <title>SVG Logo</title>
   <desc>Designed for the SVG Logo Contest in 2006 by Harvey Rayner, and adopted by W3C in 2009. It is available under the Creative Commons license for those who have an SVG product or who are using SVG on their site.</desc>
 
-   <metadata id="license">
-     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/">
-       <cc:Work rdf:about="">
-         <dc:title>SVG Logo</dc:title>
-         <dc:date>14-08-2009</dc:date>
-         <dc:creator>
-           <cc:Agent><dc:title>W3C</dc:title></cc:Agent>
-           <cc:Agent><dc:title>Harvey Rayner, designer</dc:title></cc:Agent>
-         </dc:creator>
-         <dc:description>See document description</dc:description>
-         <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/"/>
-         <dc:format>image/svg+xml</dc:format>
-         <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-       </cc:Work>
-       <cc:License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/">
-         <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
-         <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
-         <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
-         <cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
-         <cc:prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/>
-         <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
-         <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
-       </cc:License>
-     </rdf:RDF>
-   </metadata>
-
-
    <defs>
      <g id="SVG" fill="#ffffff" transform="scale(2) translate(20,79)">
         <path id="S" d="M 5.482,31.319 C2.163,28.001 0.109,23.419 0.109,18.358 C0.109,8.232 8.322,0.024 18.443,0.024 C28.569,0.024 36.782,8.232 36.782,18.358 L26.042,18.358 C26.042,14.164 22.638,10.765 18.443,10.765 C14.249,10.765 10.850,14.164 10.850,18.358 C10.850,20.453 11.701,22.351 13.070,23.721 L13.075,23.721 C14.450,25.101 15.595,25.500 18.443,25.952 L18.443,25.952 C23.509,26.479 28.091,28.006 31.409,31.324 L31.409,31.324 C34.728,34.643 36.782,39.225 36.782,44.286 C36.782,54.412 28.569,62.625 18.443,62.625 C8.322,62.625 0.109,54.412 0.109,44.286 L10.850,44.286 C10.850,48.480 14.249,51.884 18.443,51.884 C22.638,51.884 26.042,48.480 26.042,44.286 C26.042,42.191 25.191,40.298 23.821,38.923 L23.816,38.923 C22.441,37.548 20.468,37.074 18.443,36.697 L18.443,36.692 C13.533,35.939 8.800,34.638 5.482,31.319 L5.482,31.319 L5.482,31.319 Z"/>
@@ -3876,7 +3849,25 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 </svg>
   `,typescript:`
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="380" viewBox="0 0 512 512" width="380"><rect fill="#3178c6" height="512" rx="50" width="512"/><rect fill="#3178c6" height="512" rx="50" width="512"/><path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="#fff" fill-rule="evenodd"/></svg>
-`,async:"","css-tools":"",performance:""};class D extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+`,tailwind:`
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33"><g clip-path="url(#prefix__clip0)"><path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd"/></g><defs><clipPath id="prefix__clip0"><path fill="#fff" d="M0 0h54v32.4H0z"/></clipPath></defs></svg>
+    `,astro:`
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="107" viewBox="0 0 85 107" fill="none">
+<path d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z" fill="white"/>
+<path d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z" fill="url(#paint0_linear_1_59)"/>
+<path d="M0 69.5866C0 69.5866 14.3139 62.6137 28.6678 62.6137L39.4901 29.1204C39.8953 27.5007 41.0783 26.3999 42.4139 26.3999C43.7495 26.3999 44.9325 27.5007 45.3377 29.1204L56.1601 62.6137C73.1601 62.6137 84.8278 69.5866 84.8278 69.5866C84.8278 69.5866 60.5145 3.35233 60.467 3.21944C59.7692 1.2612 58.5911 0 57.0029 0H27.8274C26.2392 0 25.1087 1.2612 24.3634 3.21944C24.3108 3.34983 0 69.5866 0 69.5866Z" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear_1_59" x1="22.4702" y1="107" x2="69.1451" y2="84.9468" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D83333"/>
+<stop offset="1" stop-color="#F041FF"/>
+</linearGradient>
+</defs>
+</svg>
+`,"node-js":`
+<svg xmlns="http://www.w3.org/2000/svg" height="289" preserveAspectRatio="xMidYMid" viewBox="0 0 256 289" width="256"><path d="m127.999999 288.463771c-3.975155 0-7.6853-1.060043-11.130435-2.915115l-35.2463756-20.935818c-5.3002084-2.915114-2.650103-3.975156-1.0600426-4.505177 7.1552801-2.385091 8.4803317-2.915114 15.900623-7.15528.7950291-.53002 1.8550717-.265009 2.650103.265011l27.0310552 16.165632c1.060043.530021 2.385094.530021 3.180126 0l105.739129-61.21739c1.060043-.530023 1.590063-1.590063 1.590063-2.915115v-122.1697723c0-1.3250538-.53002-2.3850941-1.590063-2.9151143l-105.739129-60.9523818c-1.060043-.5300201-2.385094-.5300201-3.180126 0l-105.7391316 60.9523818c-1.0600403.5300202-1.5900605 1.8550717-1.5900605 2.9151143v122.1697723c0 1.060041.5300202 2.385092 1.5900605 2.915115l28.8861293 16.695652c15.6356117 7.950309 25.4409949-1.325052 25.4409949-10.600415v-120.579712c0-1.5900605 1.3250515-3.1801232 3.1801232-3.1801232h13.5155288c1.5900627 0 3.1801232 1.3250515 3.1801232 3.1801232v120.579712c0 20.935818-11.3954436 33.126293-31.2712211 33.126293-6.0952375 0-10.8654235 0-24.3809523-6.625258l-27.8260867-15.90062c-6.89026889-3.975157-11.1304347-11.395446-11.1304347-19.345758v-122.1697723c0-7.9503092 4.24016581-15.3706005 11.1304347-19.3457551l105.7391293-61.21739308c6.62526-3.71014336 15.635612-3.71014336 22.260872 0l105.739129 61.21739308c6.890269 3.9751546 11.130435 11.3954459 11.130435 19.3457551v122.1697723c0 7.950312-4.240166 15.370601-11.130435 19.345758l-105.739129 61.21739c-3.445137 1.590063-7.420291 2.385095-11.130437 2.385095zm32.596275-84.008283c-46.376813 0-55.917185-21.200829-55.917185-39.221533 0-1.590062 1.325052-3.180123 3.180123-3.180123h13.78054c1.590061 0 2.915112 1.06004 2.915112 2.650103 2.120083 14.045549 8.215323 20.935818 36.306419 20.935818 22.260871 0 31.801243-5.035197 31.801243-16.960663 0-6.890269-2.650103-11.925466-37.366461-15.370601-28.886127-2.915114-46.90683-9.275363-46.90683-32.331263 0-21.4658385 18.020703-34.1863359 48.231884-34.1863359 33.921324 0 50.616976 11.6604571 52.737059 37.1014499 0 .795031-.265011 1.590063-.795031 2.385094-.53002.53002-1.325052 1.06004-2.120083 1.06004h-13.780538c-1.325051 0-2.650103-1.06004-2.915114-2.385092-3.180123-14.575569-11.395446-19.345757-33.126293-19.345757-24.380954 0-27.296066 8.480332-27.296066 14.84058 0 7.685301 3.445134 10.070395 36.306418 14.310561 32.596273 4.240165 47.966873 10.335403 47.966873 33.126292-.265011 23.320912-19.345755 36.57143-53.00207 36.57143z" fill="#539e43"/></svg><svg xmlns="http://www.w3.org/2000/svg" height="289" preserveAspectRatio="xMidYMid" viewBox="0 0 256 289" width="256"><path d="m127.999999 288.463771c-3.975155 0-7.6853-1.060043-11.130435-2.915115l-35.2463756-20.935818c-5.3002084-2.915114-2.650103-3.975156-1.0600426-4.505177 7.1552801-2.385091 8.4803317-2.915114 15.900623-7.15528.7950291-.53002 1.8550717-.265009 2.650103.265011l27.0310552 16.165632c1.060043.530021 2.385094.530021 3.180126 0l105.739129-61.21739c1.060043-.530023 1.590063-1.590063 1.590063-2.915115v-122.1697723c0-1.3250538-.53002-2.3850941-1.590063-2.9151143l-105.739129-60.9523818c-1.060043-.5300201-2.385094-.5300201-3.180126 0l-105.7391316 60.9523818c-1.0600403.5300202-1.5900605 1.8550717-1.5900605 2.9151143v122.1697723c0 1.060041.5300202 2.385092 1.5900605 2.915115l28.8861293 16.695652c15.6356117 7.950309 25.4409949-1.325052 25.4409949-10.600415v-120.579712c0-1.5900605 1.3250515-3.1801232 3.1801232-3.1801232h13.5155288c1.5900627 0 3.1801232 1.3250515 3.1801232 3.1801232v120.579712c0 20.935818-11.3954436 33.126293-31.2712211 33.126293-6.0952375 0-10.8654235 0-24.3809523-6.625258l-27.8260867-15.90062c-6.89026889-3.975157-11.1304347-11.395446-11.1304347-19.345758v-122.1697723c0-7.9503092 4.24016581-15.3706005 11.1304347-19.3457551l105.7391293-61.21739308c6.62526-3.71014336 15.635612-3.71014336 22.260872 0l105.739129 61.21739308c6.890269 3.9751546 11.130435 11.3954459 11.130435 19.3457551v122.1697723c0 7.950312-4.240166 15.370601-11.130435 19.345758l-105.739129 61.21739c-3.445137 1.590063-7.420291 2.385095-11.130437 2.385095zm32.596275-84.008283c-46.376813 0-55.917185-21.200829-55.917185-39.221533 0-1.590062 1.325052-3.180123 3.180123-3.180123h13.78054c1.590061 0 2.915112 1.06004 2.915112 2.650103 2.120083 14.045549 8.215323 20.935818 36.306419 20.935818 22.260871 0 31.801243-5.035197 31.801243-16.960663 0-6.890269-2.650103-11.925466-37.366461-15.370601-28.886127-2.915114-46.90683-9.275363-46.90683-32.331263 0-21.4658385 18.020703-34.1863359 48.231884-34.1863359 33.921324 0 50.616976 11.6604571 52.737059 37.1014499 0 .795031-.265011 1.590063-.795031 2.385094-.53002.53002-1.325052 1.06004-2.120083 1.06004h-13.780538c-1.325051 0-2.650103-1.06004-2.915114-2.385092-3.180123-14.575569-11.395446-19.345757-33.126293-19.345757-24.380954 0-27.296066 8.480332-27.296066 14.84058 0 7.685301 3.445134 10.070395 36.306418 14.310561 32.596273 4.240165 47.966873 10.335403 47.966873 33.126292-.265011 23.320912-19.345755 36.57143-53.00207 36.57143z" fill="#539e43"/></svg>
+`,git:`
+<svg xmlns="http://www.w3.org/2000/svg" width="92pt" height="92pt" viewBox="0 0 92 92"><defs><clipPath id="a"><path d="M0 .113h91.887V92H0Zm0 0"/></clipPath></defs><g clip-path="url(#a)"><path style="stroke:none;fill-rule:nonzero;fill:#f03c2e;fill-opacity:1" d="M90.156 41.965 50.036 1.848a5.918 5.918 0 0 0-8.372 0l-8.328 8.332 10.566 10.566a7.03 7.03 0 0 1 7.23 1.684 7.034 7.034 0 0 1 1.669 7.277l10.187 10.184a7.028 7.028 0 0 1 7.278 1.672 7.04 7.04 0 0 1 0 9.957 7.05 7.05 0 0 1-9.965 0 7.044 7.044 0 0 1-1.528-7.66l-9.5-9.497V59.36a7.04 7.04 0 0 1 1.86 11.29 7.04 7.04 0 0 1-9.957 0 7.04 7.04 0 0 1 0-9.958 7.06 7.06 0 0 1 2.304-1.539V33.926a7.049 7.049 0 0 1-3.82-9.234L29.242 14.272 1.73 41.777a5.925 5.925 0 0 0 0 8.371L41.852 90.27a5.925 5.925 0 0 0 8.37 0l39.934-39.934a5.925 5.925 0 0 0 0-8.371"/></g></svg>
+`,async:"","css-tools":"",performance:""};class j extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --cover-size: 400px;
       }
@@ -3908,9 +3899,9 @@ const P=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translateX(250px);
       }
     `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const t=this.shadowRoot.querySelector(".container"),i=document.createElement(`cover-${this.logo}`);i.classList.add("box"),t.insertAdjacentElement("afterbegin",i)}render(){this.shadowRoot.innerHTML=`
-    <style>${D.styles}</style>
+    <style>${j.styles}</style>
 
     <div class="container">
       ${O[this.logo]}
     </div>
-    `}}customElements.define("cover-box",D);
+    `}}customElements.define("cover-box",j);
