@@ -46,7 +46,7 @@ class CoverWebComponents extends HTMLElement {
       header .title {
         font-family: "Roboto Mono";
         font-weight: 800;
-        font-size: 3.2rem;
+        font-size: 3rem;
         letter-spacing: -2px;
         color: #fff;
         position: absolute;
