@@ -22,7 +22,7 @@ class CoverCSSTools extends HTMLElement {
             var(--line) 0px 1px,
             var(--color) 1px 19px
           ),
-          linear-gradient(to bottom, #737a72 50%, #121317 50%);
+          linear-gradient(to bottom, #737a72 45%, #121317 45%);
         --cover-padding: 10px 25px;
       }
 
@@ -177,7 +177,7 @@ class CoverCSSTools extends HTMLElement {
       .tool {
         position: absolute;
         width: 100%;
-        top: 50%;
+        top: 45%;
         z-index: 20;
 
         & svg {
@@ -197,6 +197,7 @@ class CoverCSSTools extends HTMLElement {
         justify-content: center;
         align-content: center;
         align-items: space-around;
+        translate: 0 -15px;
 
         & h2 {
           color: #ccc;
@@ -213,6 +214,7 @@ class CoverCSSTools extends HTMLElement {
           font-family: Jost;
           text-align: center;
           border-collapse: collapse;
+          margin-top: 1rem;
 
           & th, td {
             border: 2px solid var(--color);
