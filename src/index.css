@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: "Super Mario Bros 2";
+  src:
+    url("fonts/super-mario-bros-2.woff2") format("woff2"),
+    url("fonts/super-mario-bros-2.woff") format("woff");
+}
+
+@font-face {
   font-family: Fredoka;
   src:
     url("fonts/fredoka.woff2") format("woff2"),

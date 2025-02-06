@@ -1,6 +1,7 @@
 import "./CoverHTML.js";
 import "./CoverCSS.js";
 import "./CoverPhaser.js";
+import "./CoverEvents.js";
 import "./CoverPostCSS.js";
 import "./CoverJS.js";
 import "./CoverTerminal.js";
