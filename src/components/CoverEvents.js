@@ -151,7 +151,7 @@ class CoverEvents extends HTMLElement {
 
       <footer>
         <p>Event uso bubbling...</p>
-        <p>¡Es muy efectivo!</p>
+        <p>¡Es super efectivo!</p>
       </footer>
     </div>`;
   }
