@@ -583,7 +583,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 
       <footer>
         <p>Event uso bubbling...</p>
-        <p>\xA1Es muy efectivo!</p>
+        <p>\xA1Es super efectivo!</p>
       </footer>
     </div>`}}customElements.define("cover-events",h);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
