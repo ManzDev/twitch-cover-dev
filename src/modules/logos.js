@@ -120,5 +120,7 @@ export const LOGOS = {
   async: "",
   "css-tools": "",
   performance: "",
-  events: ""
+  events: "",
+  programacion: "",
+  fonts: ""
 };

@@ -22,6 +22,8 @@ import "./CoverCSSTools.js";
 import "./CoverAnimations.js";
 import "./CoverNodeJS.js";
 import "./CoverTailwind.js";
+import "./CoverFonts.js";
+import "./CoverProgramacion.js";
 import { LOGOS } from "../modules/logos.js";
 
 class CoverBox extends HTMLElement {
