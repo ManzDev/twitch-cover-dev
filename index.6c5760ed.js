@@ -1,4 +1,4 @@
-const O=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&a(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(e){if(e.ep)return;e.ep=!0;const r=i(e);fetch(e.href,r)}};O();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+const N=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&a(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(e){if(e.ep)return;e.ep=!0;const r=i(e);fetch(e.href,r)}};N();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -585,7 +585,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         <p>Event uso bubbling...</p>
         <p>\xA1Es super efectivo!</p>
       </footer>
-    </div>`}}customElements.define("cover-events",h);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-events",h);class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --size: 200px;
 
@@ -624,9 +624,9 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         0 0 60px #000c inset;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${v.styles}</style>
+    <style>${g.styles}</style>
     <div class="container">
-    </div>`}}customElements.define("retro-square",v);class g extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("retro-square",g);class f extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -712,7 +712,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         right: 15px;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${g.styles}</style>
+    <style>${f.styles}</style>
     <div class="container">
       <retro-square></retro-square>
       <div class="title">
@@ -723,7 +723,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         Evil Martians
       </footer>
-    </div>`}}customElements.define("cover-postcss",g);class f extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-postcss",f);class v extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -828,7 +828,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         padding: var(--cover-padding);
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${f.styles}</style>
+    <style>${v.styles}</style>
     <div class="container">
       <div class="group">
         <h1>Javascript</h1>
@@ -838,7 +838,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="text">Untyped language</div>
       </footer>
-    </div>`}}customElements.define("cover-js",f);class x extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-js",v);class x extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1575,7 +1575,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </div>
         <footer></footer>
       </div>
-    </div>`}}customElements.define("cover-svg",y);const J=450,$=["#bbba","#aaaa","#999a","#777a","#555a"];class w extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-svg",y);const I=450,O=["#bbba","#aaaa","#999a","#777a","#555a"];class w extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1749,7 +1749,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         background: var(--color, #fff);
         position: absolute;
       }
-    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const a=document.createElement("div");t.appendChild(a)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let i=0;i<J;i++){const a=document.createElement("div");a.classList.add("star");const e=Math.floor(Math.random()*$.length),r=$[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);a.style.setProperty("--y",`${s}px`),a.style.setProperty("--x",`${o}px`),a.style.setProperty("--color",r),a.style.setProperty("--size",`${l}px`),t.appendChild(a)}}render(){this.shadowRoot.innerHTML=`
+    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const a=document.createElement("div");t.appendChild(a)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let i=0;i<I;i++){const a=document.createElement("div");a.classList.add("star");const e=Math.floor(Math.random()*O.length),r=O[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);a.style.setProperty("--y",`${s}px`),a.style.setProperty("--x",`${o}px`),a.style.setProperty("--color",r),a.style.setProperty("--size",`${l}px`),t.appendChild(a)}}render(){this.shadowRoot.innerHTML=`
     <style>${w.styles}</style>
     <div class="container">
 
@@ -3137,7 +3137,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         <svg><use href="#star" /></svg>
       </div>
       <div class="endline"></div>
-    </div>`}}customElements.define("cover-performance",S);class B extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-performance",S);class T extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --line: #26262633;
         --color: transparent;
@@ -3363,7 +3363,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${B.styles}</style>
+    <style>${T.styles}</style>
     <div class="container">
       <header>
         <h1>Herramientas <span>CSS</span></h1>
@@ -3410,7 +3410,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           </tr>
         </table>
       </footer>
-    </div>`}}customElements.define("cover-css-tools",B);class T extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-css-tools",T);class R extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         position: absolute;
         top: var(--y);
@@ -3488,9 +3488,9 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translate(30%, 30%) rotate(-15deg);
       }
     `}enableAnimation(){this.shadowRoot.querySelector(":host(:not(.dark)) .ball").animate([{translate:"0 -10px"},{translate:"0 20px"}],{duration:500,easing:"ease-in",iterations:1/0,direction:"alternate"})}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${T.styles}</style>
+    <style>${R.styles}</style>
     <div class="ball"></div>
-    <div class="shadow"></div>`}}customElements.define("retro-ball",T);class F extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    <div class="shadow"></div>`}}customElements.define("retro-ball",R);class B extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --bgcolor: #111;
         --width: var(--cover-size);
@@ -3607,7 +3607,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${F.styles}</style>
+    <style>${B.styles}</style>
     <div class="container">
 
       <header>
@@ -3637,7 +3637,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="brand">W3C</div>
       </footer>
-    </div>`}}customElements.define("cover-animations",F);class R extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-animations",B);class F extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3805,7 +3805,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         height: 10px;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${R.styles}</style>
+    <style>${F.styles}</style>
     <div class="container">
       <header>
         <h4>PROGRAMACI\xD3N BACKEND</h4>
@@ -3822,7 +3822,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </p>
         <div class="mini-gradient"></div>
       </footer>
-    </div>`}}customElements.define("cover-node-js",R);const A=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),V=(n,t)=>{const i=n*2+(n-2)*2,a=n-2,e=A[t],r=(7-t)/2,o=t/2,s=`--size: ${a}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,l="<div></div>".repeat(n+1),P=`<div class="central grid" style="${s}">${t<7?V(a,t+1):""}</div>`,G="<div></div>".repeat(i-(n+2)+1);return l+P+G};class D extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-node-js",F);const A=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),P=(n,t)=>{const i=n*2+(n-2)*2,a=n-2,e=A[t],r=(7-t)/2,o=t/2,s=`--size: ${a}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,l="<div></div>".repeat(n+1),G=`<div class="central grid" style="${s}">${t<7?P(a,t+1):""}</div>`,J="<div></div>".repeat(i-(n+2)+1);return l+G+J};class D extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3905,9 +3905,288 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <div class="title">TailwindCSS</div>
       <div class="subtitle">Clases de utilidad</div>
       <div class="grid parent-grid">
-        ${V(15,1)}
+        ${P(15,1)}
       </div>
-    </div>`}}customElements.define("cover-tailwind",D);const N={html:`
+    </div>`}}customElements.define("cover-tailwind",D);class j extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --bgcolor: #782daa;
+        --tile-size: 25px;
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl:
+          linear-gradient(to bottom, var(--bgcolor) 0% 29%, var(--bgcolor) 80% 100%);
+        --cover-padding: 10px 25px;
+        --grid:
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0 var(--tile-size),
+            #0006 var(--tile-size) calc(var(--tile-size) + 1px)
+          ),
+          repeating-linear-gradient(
+            to right,
+            transparent 0 var(--tile-size),
+            #0006 var(--tile-size) calc(var(--tile-size) + 1px)
+          );
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background-image:
+          var(--grid),
+          url(asfalt-dark.png),
+          var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+
+        display: grid;
+        grid-template-rows: 2fr 0.5fr 0.4fr;
+      }
+
+      header {
+        color: #fff;
+        display: grid;
+        place-items: center;
+        place-content: center;
+        height: 100%;
+
+        & h1 {
+          font-family: "Rubik";
+          font-size: 5.5rem;
+          translate: -5px;
+          text-transform: uppercase;
+          letter-spacing: -8px;
+          margin: 0;
+
+          & span {
+            display: inline-block;
+            position: relative;
+            text-shadow: 10px 10px 0 #0005;
+          }
+
+          & :nth-child(1) {
+            font-family: Arvo;
+            font-size: 6.5rem;
+            translate: -2px 12px;
+            rotate: -6deg
+          }
+          & :nth-child(2) { font-family: "Russo One"; translate: -2px 15px; z-index: 2; rotate: 2deg }
+          & :nth-child(3) { font-family: "Russo One"; font-size: 5.5rem; z-index: 3; rotate: -6deg }
+          & :nth-child(4) { font-family: Arvo; translate: 0 15px; z-index: 4; rotate: 2deg }
+          & :nth-child(5) { font-family: Fredoka; z-index: 5; rotate: 8deg }
+        }
+
+        & p {
+          font-family: Fredoka;
+          font-size: 1.75rem;
+          letter-spacing: 6px;
+          text-indent: 8px;
+          text-shadow:
+            4px 4px 2px #0004,
+            -4px -4px 2px #0004,
+            -4px 4px 6px #0002,
+            4px -4px 6px #0002;
+
+          margin: 0;
+        }
+      }
+
+      footer {
+        background: #21201c;
+        min-height: 85px;
+        padding-top: 1rem;
+        place-items: center;
+
+        & .gradient {
+          background: linear-gradient(
+            to right,
+            #73234c,
+            #7b254e,
+            #f06e21,
+            #f06e21,
+            #f6bf02,
+            #6b962a,
+            #339dac,
+            #184e76
+          );
+          width: 100%;
+          height: 40px;
+        }
+
+        & p {
+          font-family: "Rubik Italic";
+          color: #fff;
+          margin: 0;
+          padding: 0.5rem;
+        }
+      }
+
+      .logo {
+        display: inline flow;
+        padding: 4px 10px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        letter-spacing: 1px;
+        color: #fff;
+        font-family: Fredoka;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${j.styles}</style>
+    <div class="container">
+      <header>
+        <p>Aprende a usar</p>
+        <h1>
+          <span>F</span>
+          <span>O</span>
+          <span>N</span>
+          <span>T</span>
+          <span>S</span>
+        </h1>
+      </header>
+
+      <footer>
+        <div class="gradient"></div>
+        <p>Elimina la fuente de tus problemas</p>
+      </footer>
+
+      <div class="logo">ManzDev\u2122</div>
+    </div>`}}customElements.define("cover-fonts",j);class $ extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl:
+          linear-gradient(to bottom, #222 0% 29%, #222 80% 100%);
+        --cover-padding: 10px 25px;
+        --arrow-ribbon-shape: polygon(0 0, 93% 0, 100% 50%, 93% 100%, 0 100%);
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        background: url(asfalt-dark.png), var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+      }
+
+      .arrow-ribbons-container {
+        padding-top: 2rem;
+        overflow: hidden;
+        filter: drop-shadow(5px 5px 5px #0005);
+      }
+
+      hgroup {
+        display: grid;
+        place-items: center;
+        color: #ddd;
+
+        & h1 {
+          font-family: "Russo One";
+          font-size: 3.75rem;
+          text-transform: uppercase;
+          margin-top: 1.5rem;
+          margin-bottom: 0;
+          border-bottom: 1px solid red;
+
+          mask-image: linear-gradient(
+            to bottom,
+            black 50%,
+            transparent 50% 55%,
+            black 55% 65%,
+            transparent 65% 68%,
+            black 68% 75%,
+            transparent 75% 78%,
+            black 78% 100%
+          );
+        }
+
+        & p {
+          font-family: "Russo One";
+          font-weight: 500;
+          font-size: 1.5rem;
+          letter-spacing: 12px;
+          text-indent: 10px;
+          text-transform: uppercase;
+          margin: 0;
+          padding-top: 0.5rem;
+          color: #666;
+        }
+      }
+
+      footer > p {
+        color: #eee;
+        text-align: center;
+        font-family: "Rubik Italic";
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+      }
+
+      .arrow-ribbon {
+        --dark-color: color-mix(in srgb, var(--color), white 5%);
+
+        width: 95%;
+        height: 55px;
+        background-image:
+          url(asfalt-dark.png),
+          linear-gradient(
+            to right,
+            var(--dark-color) var(--start-gradient, 35% 40%),
+            var(--color) 150%
+          );
+        clip-path: var(--arrow-ribbon-shape);
+        translate: var(--offset) 0;
+        filter: saturate(120%);
+
+        &.first {
+          --color: #f0874f;
+          --offset: -1rem;
+          --start-gradient: 0% 25%;
+        }
+        &.second  {
+          --color: #974ff0;
+          --offset: -6rem;
+          --start-gradient: 0% 35%;
+        }
+        &.third   {
+          --color: #f0db4f;
+          --offset: -12rem;
+          --start-gradient: 0% 55%;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          inset: 0;
+          background-image: linear-gradient(#0006, transparent);
+          translate: 0 25px;
+        }
+      }
+    `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
+    <style>${$.styles}</style>
+    <div class="container">
+
+      <div class="arrow-ribbons-container">
+        <div class="arrow-ribbon first"></div>
+        <div class="arrow-ribbon second"></div>
+        <div class="arrow-ribbon third"></div>
+      </div>
+
+      <footer>
+        <hgroup>
+          <h1>Aprender</h1>
+          <p>Programaci\xF3n</p>
+        </hgroup>
+
+        <p>Transforma caf\xE9 en c\xF3digo</p>
+
+      </footer>
+
+    </div>`}}customElements.define("cover-programacion",$);const X={html:`
   <svg viewBox="0 0 300 300">
     <path d="M50.362 263.638 28 12.747h245.983l-22.362 250.891L150.719 292" fill="#e34f26"/>
     <path d="m151.264 270.183 81.267-22.362 19.09-214.894H151.264" fill="#ef652a"/>
@@ -4009,7 +4288,7 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 <svg xmlns="http://www.w3.org/2000/svg" height="289" preserveAspectRatio="xMidYMid" viewBox="0 0 256 289" width="256"><path d="m127.999999 288.463771c-3.975155 0-7.6853-1.060043-11.130435-2.915115l-35.2463756-20.935818c-5.3002084-2.915114-2.650103-3.975156-1.0600426-4.505177 7.1552801-2.385091 8.4803317-2.915114 15.900623-7.15528.7950291-.53002 1.8550717-.265009 2.650103.265011l27.0310552 16.165632c1.060043.530021 2.385094.530021 3.180126 0l105.739129-61.21739c1.060043-.530023 1.590063-1.590063 1.590063-2.915115v-122.1697723c0-1.3250538-.53002-2.3850941-1.590063-2.9151143l-105.739129-60.9523818c-1.060043-.5300201-2.385094-.5300201-3.180126 0l-105.7391316 60.9523818c-1.0600403.5300202-1.5900605 1.8550717-1.5900605 2.9151143v122.1697723c0 1.060041.5300202 2.385092 1.5900605 2.915115l28.8861293 16.695652c15.6356117 7.950309 25.4409949-1.325052 25.4409949-10.600415v-120.579712c0-1.5900605 1.3250515-3.1801232 3.1801232-3.1801232h13.5155288c1.5900627 0 3.1801232 1.3250515 3.1801232 3.1801232v120.579712c0 20.935818-11.3954436 33.126293-31.2712211 33.126293-6.0952375 0-10.8654235 0-24.3809523-6.625258l-27.8260867-15.90062c-6.89026889-3.975157-11.1304347-11.395446-11.1304347-19.345758v-122.1697723c0-7.9503092 4.24016581-15.3706005 11.1304347-19.3457551l105.7391293-61.21739308c6.62526-3.71014336 15.635612-3.71014336 22.260872 0l105.739129 61.21739308c6.890269 3.9751546 11.130435 11.3954459 11.130435 19.3457551v122.1697723c0 7.950312-4.240166 15.370601-11.130435 19.345758l-105.739129 61.21739c-3.445137 1.590063-7.420291 2.385095-11.130437 2.385095zm32.596275-84.008283c-46.376813 0-55.917185-21.200829-55.917185-39.221533 0-1.590062 1.325052-3.180123 3.180123-3.180123h13.78054c1.590061 0 2.915112 1.06004 2.915112 2.650103 2.120083 14.045549 8.215323 20.935818 36.306419 20.935818 22.260871 0 31.801243-5.035197 31.801243-16.960663 0-6.890269-2.650103-11.925466-37.366461-15.370601-28.886127-2.915114-46.90683-9.275363-46.90683-32.331263 0-21.4658385 18.020703-34.1863359 48.231884-34.1863359 33.921324 0 50.616976 11.6604571 52.737059 37.1014499 0 .795031-.265011 1.590063-.795031 2.385094-.53002.53002-1.325052 1.06004-2.120083 1.06004h-13.780538c-1.325051 0-2.650103-1.06004-2.915114-2.385092-3.180123-14.575569-11.395446-19.345757-33.126293-19.345757-24.380954 0-27.296066 8.480332-27.296066 14.84058 0 7.685301 3.445134 10.070395 36.306418 14.310561 32.596273 4.240165 47.966873 10.335403 47.966873 33.126292-.265011 23.320912-19.345755 36.57143-53.00207 36.57143z" fill="#539e43"/></svg><svg xmlns="http://www.w3.org/2000/svg" height="289" preserveAspectRatio="xMidYMid" viewBox="0 0 256 289" width="256"><path d="m127.999999 288.463771c-3.975155 0-7.6853-1.060043-11.130435-2.915115l-35.2463756-20.935818c-5.3002084-2.915114-2.650103-3.975156-1.0600426-4.505177 7.1552801-2.385091 8.4803317-2.915114 15.900623-7.15528.7950291-.53002 1.8550717-.265009 2.650103.265011l27.0310552 16.165632c1.060043.530021 2.385094.530021 3.180126 0l105.739129-61.21739c1.060043-.530023 1.590063-1.590063 1.590063-2.915115v-122.1697723c0-1.3250538-.53002-2.3850941-1.590063-2.9151143l-105.739129-60.9523818c-1.060043-.5300201-2.385094-.5300201-3.180126 0l-105.7391316 60.9523818c-1.0600403.5300202-1.5900605 1.8550717-1.5900605 2.9151143v122.1697723c0 1.060041.5300202 2.385092 1.5900605 2.915115l28.8861293 16.695652c15.6356117 7.950309 25.4409949-1.325052 25.4409949-10.600415v-120.579712c0-1.5900605 1.3250515-3.1801232 3.1801232-3.1801232h13.5155288c1.5900627 0 3.1801232 1.3250515 3.1801232 3.1801232v120.579712c0 20.935818-11.3954436 33.126293-31.2712211 33.126293-6.0952375 0-10.8654235 0-24.3809523-6.625258l-27.8260867-15.90062c-6.89026889-3.975157-11.1304347-11.395446-11.1304347-19.345758v-122.1697723c0-7.9503092 4.24016581-15.3706005 11.1304347-19.3457551l105.7391293-61.21739308c6.62526-3.71014336 15.635612-3.71014336 22.260872 0l105.739129 61.21739308c6.890269 3.9751546 11.130435 11.3954459 11.130435 19.3457551v122.1697723c0 7.950312-4.240166 15.370601-11.130435 19.345758l-105.739129 61.21739c-3.445137 1.590063-7.420291 2.385095-11.130437 2.385095zm32.596275-84.008283c-46.376813 0-55.917185-21.200829-55.917185-39.221533 0-1.590062 1.325052-3.180123 3.180123-3.180123h13.78054c1.590061 0 2.915112 1.06004 2.915112 2.650103 2.120083 14.045549 8.215323 20.935818 36.306419 20.935818 22.260871 0 31.801243-5.035197 31.801243-16.960663 0-6.890269-2.650103-11.925466-37.366461-15.370601-28.886127-2.915114-46.90683-9.275363-46.90683-32.331263 0-21.4658385 18.020703-34.1863359 48.231884-34.1863359 33.921324 0 50.616976 11.6604571 52.737059 37.1014499 0 .795031-.265011 1.590063-.795031 2.385094-.53002.53002-1.325052 1.06004-2.120083 1.06004h-13.780538c-1.325051 0-2.650103-1.06004-2.915114-2.385092-3.180123-14.575569-11.395446-19.345757-33.126293-19.345757-24.380954 0-27.296066 8.480332-27.296066 14.84058 0 7.685301 3.445134 10.070395 36.306418 14.310561 32.596273 4.240165 47.966873 10.335403 47.966873 33.126292-.265011 23.320912-19.345755 36.57143-53.00207 36.57143z" fill="#539e43"/></svg>
 `,git:`
 <svg xmlns="http://www.w3.org/2000/svg" width="92pt" height="92pt" viewBox="0 0 92 92"><defs><clipPath id="a"><path d="M0 .113h91.887V92H0Zm0 0"/></clipPath></defs><g clip-path="url(#a)"><path style="stroke:none;fill-rule:nonzero;fill:#f03c2e;fill-opacity:1" d="M90.156 41.965 50.036 1.848a5.918 5.918 0 0 0-8.372 0l-8.328 8.332 10.566 10.566a7.03 7.03 0 0 1 7.23 1.684 7.034 7.034 0 0 1 1.669 7.277l10.187 10.184a7.028 7.028 0 0 1 7.278 1.672 7.04 7.04 0 0 1 0 9.957 7.05 7.05 0 0 1-9.965 0 7.044 7.044 0 0 1-1.528-7.66l-9.5-9.497V59.36a7.04 7.04 0 0 1 1.86 11.29 7.04 7.04 0 0 1-9.957 0 7.04 7.04 0 0 1 0-9.958 7.06 7.06 0 0 1 2.304-1.539V33.926a7.049 7.049 0 0 1-3.82-9.234L29.242 14.272 1.73 41.777a5.925 5.925 0 0 0 0 8.371L41.852 90.27a5.925 5.925 0 0 0 8.37 0l39.934-39.934a5.925 5.925 0 0 0 0-8.371"/></g></svg>
-`,async:"","css-tools":"",performance:"",events:""};class j extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+`,async:"","css-tools":"",performance:"",events:"",programacion:"",fonts:""};class V extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --cover-size: 400px;
       }
@@ -4041,9 +4320,9 @@ const O=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translateX(250px);
       }
     `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const t=this.shadowRoot.querySelector(".container"),i=document.createElement(`cover-${this.logo}`);i.classList.add("box"),t.insertAdjacentElement("afterbegin",i)}render(){this.shadowRoot.innerHTML=`
-    <style>${j.styles}</style>
+    <style>${V.styles}</style>
 
     <div class="container">
-      ${N[this.logo]}
+      ${X[this.logo]}
     </div>
-    `}}customElements.define("cover-box",j);
+    `}}customElements.define("cover-box",V);
