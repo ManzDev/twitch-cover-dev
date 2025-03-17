@@ -25,7 +25,7 @@ class CoverProgramacion extends HTMLElement {
       }
 
       .arrow-ribbons-container {
-        padding-top: 2rem;
+        padding-top: 1rem;
         overflow: hidden;
         filter: drop-shadow(5px 5px 5px #0005);
       }
@@ -39,7 +39,7 @@ class CoverProgramacion extends HTMLElement {
           font-family: "Russo One";
           font-size: 3.75rem;
           text-transform: uppercase;
-          margin-top: 1.5rem;
+          margin-top: 1rem;
           margin-bottom: 0;
           border-bottom: 1px solid red;
 
@@ -73,7 +73,7 @@ class CoverProgramacion extends HTMLElement {
         text-align: center;
         font-family: "Rubik Italic";
         font-size: 1.2rem;
-        margin-top: 1.5rem;
+        margin-top: 2rem;
       }
 
       .arrow-ribbon {
@@ -93,7 +93,7 @@ class CoverProgramacion extends HTMLElement {
         filter: saturate(120%);
 
         &.first {
-          --color: #f0874f;
+          --color: #f0db4f;
           --offset: -1rem;
           --start-gradient: 0% 25%;
         }
@@ -103,7 +103,7 @@ class CoverProgramacion extends HTMLElement {
           --start-gradient: 0% 35%;
         }
         &.third   {
-          --color: #f0db4f;
+          --color: #f0874f;
           --offset: -12rem;
           --start-gradient: 0% 55%;
         }
