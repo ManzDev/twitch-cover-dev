@@ -1,4 +1,4 @@
-const N=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&a(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerpolicy&&(r.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?r.credentials="include":e.crossorigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function a(e){if(e.ep)return;e.ep=!0;const r=i(e);fetch(e.href,r)}};N();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+const Z=function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver(e=>{for(const a of e)if(a.type==="childList")for(const o of a.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&t(o)}).observe(document,{childList:!0,subtree:!0});function i(e){const a={};return e.integrity&&(a.integrity=e.integrity),e.referrerpolicy&&(a.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?a.credentials="include":e.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function t(e){if(e.ep)return;e.ep=!0;const a=i(e);fetch(e.href,a)}};Z();class c extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -1749,7 +1749,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         background: var(--color, #fff);
         position: absolute;
       }
-    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const t=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const a=document.createElement("div");t.appendChild(a)}}fillStars(){const t=this.shadowRoot.querySelector(".stars");for(let i=0;i<I;i++){const a=document.createElement("div");a.classList.add("star");const e=Math.floor(Math.random()*O.length),r=O[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);a.style.setProperty("--y",`${s}px`),a.style.setProperty("--x",`${o}px`),a.style.setProperty("--color",r),a.style.setProperty("--size",`${l}px`),t.appendChild(a)}}render(){this.shadowRoot.innerHTML=`
+    `}connectedCallback(){this.render(),this.fillGrid(),this.fillStars()}fillGrid(){const r=this.shadowRoot.querySelector(".grid-container .grid");for(let i=0;i<120;i++){const t=document.createElement("div");r.appendChild(t)}}fillStars(){const r=this.shadowRoot.querySelector(".stars");for(let i=0;i<I;i++){const t=document.createElement("div");t.classList.add("star");const e=Math.floor(Math.random()*O.length),a=O[e],o=Math.floor(Math.random()*400),s=Math.floor(Math.random()*400),l=1+Math.floor(Math.random()*2);t.style.setProperty("--y",`${s}px`),t.style.setProperty("--x",`${o}px`),t.style.setProperty("--color",a),t.style.setProperty("--size",`${l}px`),r.appendChild(t)}}render(){this.shadowRoot.innerHTML=`
     <style>${w.styles}</style>
     <div class="container">
 
@@ -2828,7 +2828,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <div class="level level-3"></div>
         </div>
       </div>
-    </div>`}}customElements.define("cover-git",E);class H extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-git",E);class S extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --bgcolor: #0a1022;
         --width: var(--cover-size);
@@ -2932,7 +2932,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         opacity: 1;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${H.styles}</style>
+    <style>${S.styles}</style>
     <div class="grid"></div>
     <div class="container">
       <header>
@@ -2954,7 +2954,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div>Aprender\xE1s. Es una promesa.</div>
       </footer>
-    </div>`}}customElements.define("cover-async",H);class S extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-async",S);class H extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3113,7 +3113,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         bottom: 5px;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${S.styles}</style>
+    <style>${H.styles}</style>
     <div class="container">
       <header>
         <div class="bars">
@@ -3137,7 +3137,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         <svg><use href="#star" /></svg>
       </div>
       <div class="endline"></div>
-    </div>`}}customElements.define("cover-performance",S);class T extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-performance",H);class T extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --line: #26262633;
         --color: transparent;
@@ -3490,7 +3490,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
     `}enableAnimation(){this.shadowRoot.querySelector(":host(:not(.dark)) .ball").animate([{translate:"0 -10px"},{translate:"0 20px"}],{duration:500,easing:"ease-in",iterations:1/0,direction:"alternate"})}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
     <style>${R.styles}</style>
     <div class="ball"></div>
-    <div class="shadow"></div>`}}customElements.define("retro-ball",R);class B extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    <div class="shadow"></div>`}}customElements.define("retro-ball",R);class A extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --bgcolor: #111;
         --width: var(--cover-size);
@@ -3607,7 +3607,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${B.styles}</style>
+    <style>${A.styles}</style>
     <div class="container">
 
       <header>
@@ -3637,7 +3637,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <footer>
         <div class="brand">W3C</div>
       </footer>
-    </div>`}}customElements.define("cover-animations",B);class F extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-animations",A);class B extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3805,7 +3805,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         height: 10px;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${F.styles}</style>
+    <style>${B.styles}</style>
     <div class="container">
       <header>
         <h4>PROGRAMACI\xD3N BACKEND</h4>
@@ -3822,7 +3822,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         </p>
         <div class="mini-gradient"></div>
       </footer>
-    </div>`}}customElements.define("cover-node-js",F);const A=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),P=(n,t)=>{const i=n*2+(n-2)*2,a=n-2,e=A[t],r=(7-t)/2,o=t/2,s=`--size: ${a}; --delay: ${o}s; --color: ${e}; --margin: ${r}px`,l="<div></div>".repeat(n+1),G=`<div class="central grid" style="${s}">${t<7?P(a,t+1):""}</div>`,J="<div></div>".repeat(i-(n+2)+1);return l+G+J};class D extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-node-js",B);const F=["#1A5771","#216D8E","#F79F39","#2E9AC8","#39BEF7","#38BDF8","#134053"].reverse(),G=(n,r)=>{const i=n*2+(n-2)*2,t=n-2,e=F[r],a=(7-r)/2,o=r/2,s=`--size: ${t}; --delay: ${o}s; --color: ${e}; --margin: ${a}px`,l="<div></div>".repeat(n+1),J=`<div class="central grid" style="${s}">${r<7?G(t,r+1):""}</div>`,N="<div></div>".repeat(i-(n+2)+1);return l+J+N};class $ extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -3881,9 +3881,9 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         perspective: 600px;
 
         & > div:not(.central) {
-          background: var(--color, ${A[0]});
+          background: var(--color, ${F[0]});
           /* box-shadow: 0 0 5px 1px
-            color-mix(in srgb, var(--color, ${A[0]}), black 30%);*/
+            color-mix(in srgb, var(--color, ${F[0]}), black 30%);*/
           margin: var(--margin, 3.5px);
           border-radius: 1px;
           animation: resize 2s infinite alternate var(--delay, 0.5s);
@@ -3900,14 +3900,14 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         to { transform: rotateX(80deg) }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${D.styles}</style>
+    <style>${$.styles}</style>
     <div class="container">
       <div class="title">TailwindCSS</div>
       <div class="subtitle">Clases de utilidad</div>
       <div class="grid parent-grid">
-        ${P(15,1)}
+        ${G(15,1)}
       </div>
-    </div>`}}customElements.define("cover-tailwind",D);class j extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-tailwind",$);class D extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --bgcolor: #782daa;
         --tile-size: 25px;
@@ -4035,7 +4035,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         font-size: 1.2rem;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${j.styles}</style>
+    <style>${D.styles}</style>
     <div class="container">
       <header>
         <p>Aprende a usar</p>
@@ -4054,7 +4054,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       </footer>
 
       <div class="logo">ManzDev\u2122</div>
-    </div>`}}customElements.define("cover-fonts",j);class $ extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("cover-fonts",D);class j extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --width: var(--cover-size);
         --height: var(--cover-size);
@@ -4074,7 +4074,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       }
 
       .arrow-ribbons-container {
-        padding-top: 2rem;
+        padding-top: 1rem;
         overflow: hidden;
         filter: drop-shadow(5px 5px 5px #0005);
       }
@@ -4088,7 +4088,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           font-family: "Russo One";
           font-size: 3.75rem;
           text-transform: uppercase;
-          margin-top: 1.5rem;
+          margin-top: 1rem;
           margin-bottom: 0;
           border-bottom: 1px solid red;
 
@@ -4122,7 +4122,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         text-align: center;
         font-family: "Rubik Italic";
         font-size: 1.2rem;
-        margin-top: 1.5rem;
+        margin-top: 2rem;
       }
 
       .arrow-ribbon {
@@ -4142,7 +4142,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         filter: saturate(120%);
 
         &.first {
-          --color: #f0874f;
+          --color: #f0db4f;
           --offset: -1rem;
           --start-gradient: 0% 25%;
         }
@@ -4152,7 +4152,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           --start-gradient: 0% 35%;
         }
         &.third   {
-          --color: #f0db4f;
+          --color: #f0874f;
           --offset: -12rem;
           --start-gradient: 0% 55%;
         }
@@ -4167,7 +4167,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         }
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${$.styles}</style>
+    <style>${j.styles}</style>
     <div class="container">
 
       <div class="arrow-ribbons-container">
@@ -4186,20 +4186,322 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 
       </footer>
 
-    </div>`}}customElements.define("cover-programacion",$);const X={html:`
+    </div>`}}customElements.define("cover-programacion",j);class V extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+      :host {
+        --bgcolor: #0f0135;
+        --fgcolor: #eb13e3;
+        --width: var(--cover-size);
+        --height: var(--cover-size);
+        --cover-vinyl:
+          linear-gradient(to bottom, var(--bgcolor) 0% 29%, var(--bgcolor) 80% 100%);
+        --cover-padding: 10px 25px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-rows: 0.7fr 0.3fr;
+        width: 100%;
+        height: 100%;
+        background: url(asfalt-dark.png), var(--cover-vinyl);
+        box-shadow:
+          0 0 80px #000c inset,
+          0 0 10px #0007;
+        overflow: hidden;
+      }
+
+      .sky {
+        width: 100%;
+        height: 100%;
+        background: #13023a;
+        background-image:
+          linear-gradient(0deg, #440f6388 5px, transparent 80px),
+          linear-gradient(82deg, #440f6388 5px, transparent 80px),
+          linear-gradient(-82deg, #440f6388 5px, transparent 80px);
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        .sun {
+          width: 250px;
+          height: 250px;
+          border-radius: 50%;
+          position: absolute;
+          top: 95px;
+          background: linear-gradient(
+            to bottom,
+            #ea13e2 20%,
+            #0cc9f6 60%
+          );
+          mask-image: repeating-linear-gradient(
+            to top,
+            transparent 0 3px,
+            #000 3px 32px
+          );
+        }
+
+        .grid {
+          --fgcolor: #5026b02e;
+          --grid-line-size: 1px;
+          --underlayer: linear-gradient(
+            to right,
+            transparent,
+            transparent
+          );
+          background:
+            var(--grid-h),
+            var(--grid-v);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          transform: scale(1.04);
+        }
+      }
+
+      .floor {
+        height: 100%;
+        perspective: 100px;
+        z-index: 5;
+
+        .grid {
+          --cell-size-h: 25px;
+          --grid-line-size: 2px;
+          --underlayer: radial-gradient(
+            circle 1200px at 50% 0,
+            #2858d3 45px,
+            #13023c 150px
+          );
+          width: 100%;
+          height: 100%;
+          transform: scale(1.5) translateY(-18px) rotateX(45deg);
+
+          & .monolits {
+
+            & .monolit {
+              translate: 0 -5px;
+              border: 0;
+              opacity: 0.6;
+              filter: blur(1px);
+              mix-blend-mode: hard-light;
+            }
+
+            & .monolit:nth-child(odd) {
+              translate: 0 -25px;
+              height: 95px;
+            }
+
+          }
+        }
+      }
+
+      header {
+        position: absolute;
+        top: 0;
+        color: #fff;
+
+        & h1 {
+          --border-color: #fff;
+
+          font-family: Lalezar;
+          font-size: 5rem;
+          margin: -0.5rem;
+
+          background:
+            linear-gradient(
+              #1c4dda 32px,
+              #68e1f2 40px 44px,
+              #fff 50px 55px,
+              #b117a0 55px 60px,
+              #eb14eb 63px 66px,
+              #fff 78px
+            );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          filter:
+            drop-shadow(-2px 0 0 var(--border-color))
+            drop-shadow(2px 0 0 var(--border-color))
+            drop-shadow(0 2px 0 var(--border-color))
+            drop-shadow(0 -2px 0 var(--border-color))
+            drop-shadow(0 0 4px #fff4)
+            drop-shadow(0 0 4px #fff3)
+            drop-shadow(0 0 4px #fff2)
+            drop-shadow(5px 5px 3px #000c)
+            drop-shadow(0 0 4px #0e0480);
+
+            &::after {
+              content: "";
+              display: block;
+              background: #10fcfa;
+              width: 12px;
+              height: 12px;
+              position: absolute;
+              top: 21px;
+              right: -6px;
+              corner-shape: scoop;
+              border-radius: 50%;
+              filter: drop-shadow(0 0 4px #fff4);
+            }
+        }
+
+        & span {
+          display: inline-block;
+          font-family: "Grape Nuts";
+          font-size: 2.5rem;
+          color: white;
+          font-weight: 600;
+          translate: 7.5rem -2.5rem;
+          rotate: -3deg;
+          text-shadow:
+            0 0 4px #d919c6,
+            0 0 4px #d919c6,
+            0 0 4px #d919c6,
+            0 0 4px #d919c6,
+            0 0 4px #d919c6,
+            0 0 4px #d919c6,
+            0 0 4px #d919c6,
+            0 0 4px #d919c6,
+            0 0 20px #d919c6;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 150px;
+              height: 16px;
+              border: 5px solid #fff;
+              border-radius: 400px 0 0 / 50px 5px 0;
+              border-bottom: 0;
+              border-left: 0;
+              border-right: 0;
+              rotate: 2deg;
+              translate: 30px -5px;
+              filter:
+                drop-shadow(0 0 2px #d919c6)
+                drop-shadow(0 0 2px #d919c6)
+                drop-shadow(0 0 8px #d919c6);
+            }
+        }
+      }
+
+      .stars {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          mix-blend-mode: saturation;
+          background: linear-gradient(to right, #ea13e2, #0cc9f6, #ea13e2);
+        }
+
+        & .star {
+          width: var(--size);
+          height: var(--size);
+          background: #fff;
+          translate: var(--x) var(--y);
+          opacity: var(--opacity, 1);
+        }
+      }
+
+      .monolits {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        width: calc(var(--cover-size) / 1.75);
+        margin: auto;
+        justify-content: space-evenly;
+        align-items: end;
+
+        & .monolit {
+          background: #111;
+          box-shadow:
+            0 3px 10px #333 inset,
+            0 5px 20px #222 inset,
+            0 1px 10px #333 inset;
+          width: 55px;
+          height: 115px;
+          border: 2px solid transparent;
+          background:
+            linear-gradient(#111, #111) padding-box,
+            linear-gradient(var(--fgcolor) 5%, #111 70%) border-box;
+
+          &:nth-child(odd) {
+            height: 110px;
+            translate: 0 30px;
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            background: #444;
+            width: 100%;
+            height: 15px;
+            filter: blur(20px);
+          }
+        }
+      }
+
+      .grid {
+        --grid-v: repeating-linear-gradient(
+          to left,
+          var(--fgcolor) 0 var(--grid-line-size),
+          transparent var(--grid-line-size) 50px
+        );
+        --grid-h: repeating-linear-gradient(
+          to bottom,
+          var(--fgcolor) 0 var(--grid-line-size),
+          transparent var(--grid-line-size) var(--cell-size-h, 50px)
+        );
+
+        background:
+          linear-gradient(to top, transparent 40%, #003 95%),
+          var(--grid-h),
+          var(--grid-v),
+          var(--underlayer);
+      }
+    `}putStars(){const r=this.shadowRoot.querySelector(".stars"),i=Number.parseInt(getComputedStyle(this).getPropertyValue("--cover-size"));console.log(i);for(let t=0;t<300;t++){const e=document.createElement("div"),a=1,o=~~(Math.random()*i),s=~~(Math.random()*i),l=~~(Math.random()*100)/100;e.classList.add("star",`star-${t}`),e.style.setProperty("--x",`${o}px`),e.style.setProperty("--y",`${s}px`),e.style.setProperty("--size",`${a}px`),e.style.setProperty("--opacity",l),r.append(e)}}connectedCallback(){this.render(),this.putStars()}render(){this.shadowRoot.innerHTML=`
+    <style>${V.styles}</style>
+    <div class="container">
+      <div class="sky">
+        <div class="grid"></div>
+        <div class="stars"></div>
+        <div class="sun"></div>
+        <div class="monolits">
+          <div class="monolit monolit-1"></div>
+          <div class="monolit monolit-2"></div>
+          <div class="monolit monolit-3"></div>
+        </div>
+        <header>
+          <h1>LAYOUTS</h1>
+          <span>Flex & Grid</span>
+        </header>
+      </div>
+      <div class="floor">
+        <div class="grid">
+          <div class="monolits">
+            <div class="monolit monolit-1"></div>
+            <div class="monolit monolit-2"></div>
+            <div class="monolit monolit-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>`}}customElements.define("cover-layouts",V);const q={html:`
   <svg viewBox="0 0 300 300">
     <path d="M50.362 263.638 28 12.747h245.983l-22.362 250.891L150.719 292" fill="#e34f26"/>
     <path d="m151.264 270.183 81.267-22.362 19.09-214.894H151.264" fill="#ef652a"/>
     <path d="M151.264 126.193h-40.906l-2.727-31.634h43.633V64.016H73.815l.545 8.181 7.636 85.085h69.268zm0 80.177h-.545l-34.361-9.273-2.182-24.543H83.633l3.817 48.542 63.269 17.453h.545z" fill="#ebebeb"/>
     <path d="M150.719 126.193v31.089h38.179l-3.818 39.815-34.361 9.273v32.18l63.268-17.454.546-5.454 7.09-81.267 1.09-8.182h-8.726zm0-62.177v30.543h74.722l.545-6.545 1.637-15.817.545-8.181z" fill="#fff"/>
   </svg>`,css:`
-  <svg viewBox="0 0 300 300">
-    <path d="M50.011 263.412 27.657 12.694h245.624L250.906 263.37l-100.587 27.886zm0 0" fill="#1572b6"/>
-    <path d="m150.47 269.943 81.278-22.534L250.87 33.194h-100.4zm0 0" fill="#33a9dc"/>
-    <path d="M150.47 124.028h40.69l2.809-31.489h-43.5V61.79h77.106l-.737 8.25-7.557 84.737h-68.812zm0 0" fill="#fff"/>
-    <path d="m150.654 203.886-.135.037-34.246-9.247-2.19-24.523H83.217l4.307 48.28 62.988 17.486.142-.04zm0 0" fill="#ebebeb"/>
-    <path d="m188.546 153.474-3.703 41.182-34.295 9.256v31.992l63.038-17.471.462-5.194 5.349-59.765zm0 0" fill="#fff"/>
-    <path d="M150.576 61.79v30.75H76.303l-.618-6.912-1.401-15.588-.735-8.25zm-.106 62.242v30.749h-33.812l-.617-6.91-1.402-15.59-.735-8.25zm0 0" fill="#ebebeb"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="css-logo-title css-logo-description">
+  <title id="css-logo-title">CSS Logo</title>
+  <desc id="css-logo-description">A purple square with rounded corners and the letters CSS inside in white</desc>
+  <path id="bg" fill="#639" d="M0 0H840A160 160 0 0 1 1000 160V840A160 160 0 0 1 840 1000H160A160 160 0 0 1 0 840V0Z"/>
+  <path id="fg" fill="#fff" d="m358.1,920c-64.23-.06-103.86-36.23-103.1-102.79,0,0,0-168.39,0-168.39,0-33.74,9.88-59.4,29.64-76.96,35.49-34.19,117.83-36.27,152.59.52,21.42,18.89,29.5,57.48,27.58,93.49h-73.72c.56-14.15-.19-35.58-8.51-43.65-10.81-14.63-39.36-12.91-46.91,2.32-4.64,8.26-6.96,20.49-6.96,36.67v146.18c0,30.65,10.65,46.15,31.96,46.49,9.96,0,17.53-3.62,22.68-10.85,7.19-8.58,8.31-27.58,7.73-41.32h73.72c5.04,70.07-36.32,119.16-106.71,118.29Zm234.04,0c-71.17.98-103.01-49.66-101.04-118.29h69.59c-1.93,29.92,8.35,57.17,32.99,55.27,10.99,0,18.73-3.44,23.2-10.33,8.5-12.59,10.09-48.95-2.06-63.02-8.49-13.55-39.03-25.51-55.16-33.57-23.03-11.02-39.61-24.1-49.75-39.26-22.87-33.64-20.75-107.48,11.34-137.4,31.18-36.92,112.61-38.62,143.82-.77,19.25,19.51,27.66,57.9,26.03,93.23h-67.02c.57-14.52-.8-37.95-6.44-46.49-3.95-7.23-11.43-10.85-22.42-10.85-19.59,0-29.38,11.71-29.38,35.12.21,24.86,9.9,35.06,32.48,45.45,29.24,11.36,66.42,30.76,79.9,54.24,40.2,71.54,12.62,180.82-86.09,176.65Zm224.76,0c-71.17.98-103.01-49.66-101.04-118.29h69.59c-1.93,29.92,8.35,57.17,32.99,55.27,10.99,0,18.73-3.44,23.2-10.33,8.5-12.59,10.09-48.95-2.06-63.02-8.49-13.55-39.03-25.51-55.16-33.57-23.03-11.02-39.61-24.1-49.75-39.26-22.87-33.64-20.75-107.48,11.34-137.4,31.18-36.92,112.61-38.62,143.82-.77,19.25,19.51,27.66,57.9,26.03,93.23h-67.02c.57-14.52-.8-37.95-6.44-46.49-3.95-7.23-11.43-10.85-22.42-10.85-19.59,0-29.38,11.71-29.38,35.12.21,24.86,9.9,35.06,32.48,45.45,29.24,11.36,66.42,30.76,79.9,54.24,40.2,71.54,12.62,180.82-86.09,176.65Z"/>
   </svg>`,js:`
   <svg viewBox="0 0 126 126">
     <path d="M12.6 13h99.8v100H12.6z" fill="#f0db4f"/>
@@ -4288,7 +4590,7 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
 <svg xmlns="http://www.w3.org/2000/svg" height="289" preserveAspectRatio="xMidYMid" viewBox="0 0 256 289" width="256"><path d="m127.999999 288.463771c-3.975155 0-7.6853-1.060043-11.130435-2.915115l-35.2463756-20.935818c-5.3002084-2.915114-2.650103-3.975156-1.0600426-4.505177 7.1552801-2.385091 8.4803317-2.915114 15.900623-7.15528.7950291-.53002 1.8550717-.265009 2.650103.265011l27.0310552 16.165632c1.060043.530021 2.385094.530021 3.180126 0l105.739129-61.21739c1.060043-.530023 1.590063-1.590063 1.590063-2.915115v-122.1697723c0-1.3250538-.53002-2.3850941-1.590063-2.9151143l-105.739129-60.9523818c-1.060043-.5300201-2.385094-.5300201-3.180126 0l-105.7391316 60.9523818c-1.0600403.5300202-1.5900605 1.8550717-1.5900605 2.9151143v122.1697723c0 1.060041.5300202 2.385092 1.5900605 2.915115l28.8861293 16.695652c15.6356117 7.950309 25.4409949-1.325052 25.4409949-10.600415v-120.579712c0-1.5900605 1.3250515-3.1801232 3.1801232-3.1801232h13.5155288c1.5900627 0 3.1801232 1.3250515 3.1801232 3.1801232v120.579712c0 20.935818-11.3954436 33.126293-31.2712211 33.126293-6.0952375 0-10.8654235 0-24.3809523-6.625258l-27.8260867-15.90062c-6.89026889-3.975157-11.1304347-11.395446-11.1304347-19.345758v-122.1697723c0-7.9503092 4.24016581-15.3706005 11.1304347-19.3457551l105.7391293-61.21739308c6.62526-3.71014336 15.635612-3.71014336 22.260872 0l105.739129 61.21739308c6.890269 3.9751546 11.130435 11.3954459 11.130435 19.3457551v122.1697723c0 7.950312-4.240166 15.370601-11.130435 19.345758l-105.739129 61.21739c-3.445137 1.590063-7.420291 2.385095-11.130437 2.385095zm32.596275-84.008283c-46.376813 0-55.917185-21.200829-55.917185-39.221533 0-1.590062 1.325052-3.180123 3.180123-3.180123h13.78054c1.590061 0 2.915112 1.06004 2.915112 2.650103 2.120083 14.045549 8.215323 20.935818 36.306419 20.935818 22.260871 0 31.801243-5.035197 31.801243-16.960663 0-6.890269-2.650103-11.925466-37.366461-15.370601-28.886127-2.915114-46.90683-9.275363-46.90683-32.331263 0-21.4658385 18.020703-34.1863359 48.231884-34.1863359 33.921324 0 50.616976 11.6604571 52.737059 37.1014499 0 .795031-.265011 1.590063-.795031 2.385094-.53002.53002-1.325052 1.06004-2.120083 1.06004h-13.780538c-1.325051 0-2.650103-1.06004-2.915114-2.385092-3.180123-14.575569-11.395446-19.345757-33.126293-19.345757-24.380954 0-27.296066 8.480332-27.296066 14.84058 0 7.685301 3.445134 10.070395 36.306418 14.310561 32.596273 4.240165 47.966873 10.335403 47.966873 33.126292-.265011 23.320912-19.345755 36.57143-53.00207 36.57143z" fill="#539e43"/></svg><svg xmlns="http://www.w3.org/2000/svg" height="289" preserveAspectRatio="xMidYMid" viewBox="0 0 256 289" width="256"><path d="m127.999999 288.463771c-3.975155 0-7.6853-1.060043-11.130435-2.915115l-35.2463756-20.935818c-5.3002084-2.915114-2.650103-3.975156-1.0600426-4.505177 7.1552801-2.385091 8.4803317-2.915114 15.900623-7.15528.7950291-.53002 1.8550717-.265009 2.650103.265011l27.0310552 16.165632c1.060043.530021 2.385094.530021 3.180126 0l105.739129-61.21739c1.060043-.530023 1.590063-1.590063 1.590063-2.915115v-122.1697723c0-1.3250538-.53002-2.3850941-1.590063-2.9151143l-105.739129-60.9523818c-1.060043-.5300201-2.385094-.5300201-3.180126 0l-105.7391316 60.9523818c-1.0600403.5300202-1.5900605 1.8550717-1.5900605 2.9151143v122.1697723c0 1.060041.5300202 2.385092 1.5900605 2.915115l28.8861293 16.695652c15.6356117 7.950309 25.4409949-1.325052 25.4409949-10.600415v-120.579712c0-1.5900605 1.3250515-3.1801232 3.1801232-3.1801232h13.5155288c1.5900627 0 3.1801232 1.3250515 3.1801232 3.1801232v120.579712c0 20.935818-11.3954436 33.126293-31.2712211 33.126293-6.0952375 0-10.8654235 0-24.3809523-6.625258l-27.8260867-15.90062c-6.89026889-3.975157-11.1304347-11.395446-11.1304347-19.345758v-122.1697723c0-7.9503092 4.24016581-15.3706005 11.1304347-19.3457551l105.7391293-61.21739308c6.62526-3.71014336 15.635612-3.71014336 22.260872 0l105.739129 61.21739308c6.890269 3.9751546 11.130435 11.3954459 11.130435 19.3457551v122.1697723c0 7.950312-4.240166 15.370601-11.130435 19.345758l-105.739129 61.21739c-3.445137 1.590063-7.420291 2.385095-11.130437 2.385095zm32.596275-84.008283c-46.376813 0-55.917185-21.200829-55.917185-39.221533 0-1.590062 1.325052-3.180123 3.180123-3.180123h13.78054c1.590061 0 2.915112 1.06004 2.915112 2.650103 2.120083 14.045549 8.215323 20.935818 36.306419 20.935818 22.260871 0 31.801243-5.035197 31.801243-16.960663 0-6.890269-2.650103-11.925466-37.366461-15.370601-28.886127-2.915114-46.90683-9.275363-46.90683-32.331263 0-21.4658385 18.020703-34.1863359 48.231884-34.1863359 33.921324 0 50.616976 11.6604571 52.737059 37.1014499 0 .795031-.265011 1.590063-.795031 2.385094-.53002.53002-1.325052 1.06004-2.120083 1.06004h-13.780538c-1.325051 0-2.650103-1.06004-2.915114-2.385092-3.180123-14.575569-11.395446-19.345757-33.126293-19.345757-24.380954 0-27.296066 8.480332-27.296066 14.84058 0 7.685301 3.445134 10.070395 36.306418 14.310561 32.596273 4.240165 47.966873 10.335403 47.966873 33.126292-.265011 23.320912-19.345755 36.57143-53.00207 36.57143z" fill="#539e43"/></svg>
 `,git:`
 <svg xmlns="http://www.w3.org/2000/svg" width="92pt" height="92pt" viewBox="0 0 92 92"><defs><clipPath id="a"><path d="M0 .113h91.887V92H0Zm0 0"/></clipPath></defs><g clip-path="url(#a)"><path style="stroke:none;fill-rule:nonzero;fill:#f03c2e;fill-opacity:1" d="M90.156 41.965 50.036 1.848a5.918 5.918 0 0 0-8.372 0l-8.328 8.332 10.566 10.566a7.03 7.03 0 0 1 7.23 1.684 7.034 7.034 0 0 1 1.669 7.277l10.187 10.184a7.028 7.028 0 0 1 7.278 1.672 7.04 7.04 0 0 1 0 9.957 7.05 7.05 0 0 1-9.965 0 7.044 7.044 0 0 1-1.528-7.66l-9.5-9.497V59.36a7.04 7.04 0 0 1 1.86 11.29 7.04 7.04 0 0 1-9.957 0 7.04 7.04 0 0 1 0-9.958 7.06 7.06 0 0 1 2.304-1.539V33.926a7.049 7.049 0 0 1-3.82-9.234L29.242 14.272 1.73 41.777a5.925 5.925 0 0 0 0 8.371L41.852 90.27a5.925 5.925 0 0 0 8.37 0l39.934-39.934a5.925 5.925 0 0 0 0-8.371"/></g></svg>
-`,async:"","css-tools":"",performance:"",events:"",programacion:"",fonts:""};class V extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
+`,async:"","css-tools":"",performance:"",events:"",programacion:"",fonts:"",layouts:""};class P extends HTMLElement{constructor(){super();this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         --cover-size: 400px;
       }
@@ -4319,10 +4621,10 @@ const N=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       .container .box:hover + svg {
         transform: translateX(250px);
       }
-    `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const t=this.shadowRoot.querySelector(".container"),i=document.createElement(`cover-${this.logo}`);i.classList.add("box"),t.insertAdjacentElement("afterbegin",i)}render(){this.shadowRoot.innerHTML=`
-    <style>${V.styles}</style>
+    `}connectedCallback(){this.logo=this.getAttribute("logo"),this.render();const r=this.shadowRoot.querySelector(".container"),i=document.createElement(`cover-${this.logo}`);i.classList.add("box"),r.insertAdjacentElement("afterbegin",i)}render(){this.shadowRoot.innerHTML=`
+    <style>${P.styles}</style>
 
     <div class="container">
-      ${X[this.logo]}
+      ${q[this.logo]}
     </div>
-    `}}customElements.define("cover-box",V);
+    `}}customElements.define("cover-box",P);
